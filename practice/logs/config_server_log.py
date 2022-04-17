@@ -25,15 +25,15 @@ LOG_FILE = logging.handlers.TimedRotatingFileHandler(PATH, encoding='utf8', inte
 LOG_FILE.setFormatter(SERVER_FORMATTER)
 
 # создаём регистратор и настраиваем его
-LOGGER = logging.getLogger('server')
-LOGGER.addHandler(STREAM_HANDLER)
-LOGGER.addHandler(LOG_FILE)
-LOGGER.setLevel(LOGGING_LEVEL)
+logging = logging.getLogger('server')
+logging.addHandler(STREAM_HANDLER)
+logging.addHandler(LOG_FILE)
+logging.setLevel(LOGGING_LEVEL)
 
 # отладка
 if __name__ == '__main__':
-    LOGGER.critical('Критическая ошибка')
-    LOGGER.error('Ошибка')
-    LOGGER.warning('Предупреждение')
-    LOGGER.info('Информационное сообщение')
-    LOGGER.debug('Отладочная информация')
+    logging.critical('Критическая ошибка')
+    logging.error('Ошибка')
+    logging.warning('Предупреждение')
+    logging.info('Информационное сообщение')
+    logging.debug('Отладочная информация')

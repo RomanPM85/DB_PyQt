@@ -25,15 +25,15 @@ LOG_FILE = logging.FileHandler(PATH, encoding='utf8')
 LOG_FILE.setFormatter(CLIENT_FORMATTER)
 
 # создаём регистратор и настраиваем его
-LOGGER = logging.getLogger('client')
-LOGGER.addHandler(STREAM_HANDLER)
-LOGGER.addHandler(LOG_FILE)
-LOGGER.setLevel(LOGGING_LEVEL)
+logging = logging.getLogger('client')
+logging.addHandler(STREAM_HANDLER)
+logging.addHandler(LOG_FILE)
+logging.setLevel(LOGGING_LEVEL)
 
 # отладка
 if __name__ == '__main__':
-    LOGGER.critical('Критическая ошибка')
-    LOGGER.error('Ошибка')
-    LOGGER.warning('Предупреждение')
-    LOGGER.info('Информационное сообщение')
-    LOGGER.debug('Отладочная информация')
+    logging.critical('Критическая ошибка')
+    logging.error('Ошибка')
+    logging.warning('Предупреждение')
+    logging.info('Информационное сообщение')
+    logging.debug('Отладочная информация')
