@@ -1,7 +1,7 @@
 """Утилиты"""
 
-import json
 import sys
+import json
 from common.variables import *
 from errors import IncorrectDataRecivedError, NonDictInputError
 from decos import log

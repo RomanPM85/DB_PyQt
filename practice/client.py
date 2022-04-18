@@ -16,7 +16,7 @@ from decos import log
 from metaclasses import ClientVerifier
 
 # Инициализация клиентского логирования
-logging = logging.getLogger('client')
+logger = logging.getLogger('client_dist')
 
 
 # Класс формировки и отправки сообщений на сервер и взаимодействия с пользователем.
@@ -44,12 +44,12 @@ class ClientSender(threading.Thread, metaclass=ClientVerifier):
         :param account_name:
         :return:
         """
-        to_user = input('Введите получателя сообщения: ')
+        to = input('Введите получателя сообщения: ')
         message = input('Введите сообщение для отправки: ')
         message_dict = {
             ACTION: MESSAGE,
             SENDER: self.account_name,
-            DESTINATION: to_user,
+            DESTINATION: to,
             TIME: time.time(),
             MESSAGE_TEXT: message
         }
@@ -109,13 +109,13 @@ class ClientReader(threading.Thread, metaclass=ClientVerifier):
                 if ACTION in message and message[ACTION] == MESSAGE and SENDER in message and DESTINATION in message \
                         and MESSAGE_TEXT in message and message[DESTINATION] == self.account_name:
                     print(f'\nПолучено сообщение от пользователя {message[SENDER]}:\n{message[MESSAGE_TEXT]}')
-                    logging.info(f'Получено сообщение от пользователя {message[SENDER]}:\n{message[MESSAGE_TEXT]}')
+                    logger.info(f'Получено сообщение от пользователя {message[SENDER]}:\n{message[MESSAGE_TEXT]}')
                 else:
-                    logging.error(f'Получено некорректное сообщение с сервера: {message}')
+                    logger.error(f'Получено некорректное сообщение с сервера: {message}')
             except IncorrectDataRecivedError:
-                logging.error(f'Не удалось декодировать полученное сообщение.')
+                logger.error(f'Не удалось декодировать полученное сообщение.')
             except (OSError, ConnectionError, ConnectionAbortedError, ConnectionResetError, json.JSONDecodeError):
-                logging.critical(f'Потеряно соединение с сервером.')
+                logger.critical(f'Потеряно соединение с сервером.')
                 break
 
 
@@ -182,11 +182,11 @@ def arg_parser():
 
 
 def main():
-    # Загружаем параметры командной строки
-    server_address, server_port, client_name = arg_parser()
-
     """Сообщаем о запуске"""
     print(f'Консольный мессенджер. Клиентский модуль. Имя пользователя: {client_name}')
+
+    # Загружаем параметры командной строки
+    server_address, server_port, client_name = arg_parser()
 
     # Если имя пользователя не было задано, необходимо запросить пользователя.
     if not client_name:
@@ -194,7 +194,7 @@ def main():
     else:
         print(f'Клиентский модуль запущен с именем: {client_name}')
 
-    logging.info(
+    logger.info(
         f'Запущен клиент с параметрами: адрес сервера: {server_address}, '
         f'порт: {server_port}, имя пользователя: {client_name}')
 
@@ -204,19 +204,19 @@ def main():
         transport.connect((server_address, server_port))
         send_message(transport, create_presence(client_name))
         answer = process_response_ans(get_message(transport))
-        logging.info(f'Установлено соединение с сервером. Ответ сервера: {answer}')
+        logger.info(f'Установлено соединение с сервером. Ответ сервера: {answer}')
         print(f'Установлено соединение с сервером.')
     except json.JSONDecodeError:
-        logging.error('Не удалось декодировать полученную Json строку.')
+        logger.error('Не удалось декодировать полученную Json строку.')
         exit(1)
     except ServerError as error:
-        logging.error(f'При установке соединения сервер вернул ошибку: {error.text}')
+        logger.error(f'При установке соединения сервер вернул ошибку: {error.text}')
         exit(1)
     except ReqFieldMissingError as missing_error:
-        logging.error(f'В ответе сервера отсутствует необходимое поле {missing_error.missing_field}')
+        logger.error(f'В ответе сервера отсутствует необходимое поле {missing_error.missing_field}')
         exit(1)
     except (ConnectionRefusedError, ConnectionError):
-        logging.critical(
+        logger.critical(
             f'Не удалось подключиться к серверу {server_address}:{server_port}, '
             f'конечный компьютер отверг запрос на подключение.')
         exit(1)
@@ -231,7 +231,7 @@ def main():
         module_sender = ClientSender(client_name, transport)
         module_sender.daemon = True
         module_sender.start()
-        logging.debug('Запущены процессы')
+        logger.debug('Запущены процессы')
 
         # Watchdog основной цикл, если один из потоков завершён,
         # то значит или, потеряно соединение или пользователь
