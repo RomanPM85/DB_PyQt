@@ -40,9 +40,6 @@ class ClientSender(threading.Thread, metaclass=ClientVerifier):
         """
         Функция запрашивает кому отправить сообщение и само сообщение,
         и отправляет полученные данные на сервер
-        :param sock:
-        :param account_name:
-        :return:
         """
         to = input('Введите получателя сообщения: ')
         message = input('Введите сообщение для отправки: ')
@@ -53,17 +50,18 @@ class ClientSender(threading.Thread, metaclass=ClientVerifier):
             TIME: time.time(),
             MESSAGE_TEXT: message
         }
-        logging.debug(f'Сформирован словарь сообщения: {message_dict}')
+        logger.debug(f'Сформирован словарь сообщения: {message_dict}')
         try:
             send_message(self.sock, message_dict)
-            logging.info(f'Отправлено сообщение для пользователя {to_user}')
+            logger.info(f'Отправлено сообщение для пользователя {to}')
         except Exception as e:
             print(e)
-            logging.critical('Потеряно соединение с сервером.')
+            logger.critical('Потеряно соединение с сервером.')
             exit(1)
 
-    # Функция взаимодействия с пользователем, запрашивает команды, отправляет сообщения
     def run(self):
+        """Функция взаимодействия с пользователем,
+        запрашивает команды, отправляет сообщения"""
         self.print_help()
         while True:
             command = input('Введите команду: ')
@@ -77,7 +75,7 @@ class ClientSender(threading.Thread, metaclass=ClientVerifier):
                 except:
                     pass
                 print('Завершение соединения.')
-                logging.info('Завершение работы по команде пользователя.')
+                logger.info('Завершение работы по команде пользователя.')
                 # Задержка необходима, чтобы успело уйти сообщение о выходе
                 time.sleep(0.5)
                 break
@@ -96,13 +94,17 @@ class ClientSender(threading.Thread, metaclass=ClientVerifier):
 
 
 class ClientReader(threading.Thread, metaclass=ClientVerifier):
+    """Класс-приёмник сообщений с сервера.
+    Принимает сообщения, выводит в консоль."""
     def __init__(self, account_name, sock):
         self.account_name = account_name
         self.sock = sock
         super().__init__()
 
-    # Основной цикл приёмника сообщений, принимает сообщения, выводит в консоль. Завершается при потере соединения.
     def run(self):
+        """Основной цикл приёмника сообщений,
+        принимает сообщения, выводит в консоль.
+        Завершается при потере соединения."""
         while True:
             try:
                 message = get_message(self.sock)
@@ -129,7 +131,7 @@ def create_presence(account_name):
             ACCOUNT_NAME: account_name
         }
     }
-    logging.debug(f'Сформировано {PRESENCE} сообщение для пользователя {account_name}')
+    logger.debug(f'Сформировано {PRESENCE} сообщение для пользователя {account_name}')
     return out
 
 
@@ -140,7 +142,7 @@ def process_response_ans(message):
     :param message:
     :return:
     """
-    logging.debug(f'Разбор сообщения от сервера: {message}')
+    logger.debug(f'Разбор сообщения от сервера: {message}')
     if RESPONSE in message:
         if message[RESPONSE] == 200:
             return '200 : OK'
@@ -173,7 +175,7 @@ def arg_parser():
 
     # проверим подходящий номер порта
     if not 1023 < server_port < 65536:
-        logging.critical(
+        logger.critical(
             f'Попытка запуска клиента с неподходящим номером порта: {server_port}. '
             f'Допустимы адреса с 1024 до 65535. Клиент завершается.')
         exit(1)
@@ -183,7 +185,7 @@ def arg_parser():
 
 def main():
     """Сообщаем о запуске"""
-    print(f'Консольный мессенджер. Клиентский модуль. Имя пользователя: {client_name}')
+    print(f'Консольный мессенджер. Клиентский модуль.')
 
     # Загружаем параметры командной строки
     server_address, server_port, client_name = arg_parser()
@@ -233,11 +235,11 @@ def main():
         module_sender.start()
         logger.debug('Запущены процессы')
 
-        # Watchdog основной цикл, если один из потоков завершён,
-        # то значит или, потеряно соединение или пользователь
-        # ввёл exit. Поскольку все события обрабатываются в потоках,
-        # достаточно просто завершить цикл.
         while True:
+            """ Watchdog основной цикл, если один из потоков завершён, 
+            то значит или, потеряно соединение или пользователь
+            ввёл exit. Поскольку все события обрабатываются в потоках,
+            достаточно просто завершить цикл."""
             time.sleep(1)
             if module_reciver.is_alive() and module_sender.is_alive():
                 continue

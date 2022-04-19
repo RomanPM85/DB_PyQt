@@ -1,11 +1,12 @@
+import os.path
 import socket
 import sys
 import argparse
 import json
 import logging
 import select
-import threading
 import time
+import threading
 import logs.config_server_log
 from errors import IncorrectDataRecivedError
 from common.variables import *
@@ -42,15 +43,16 @@ def print_help():
     print('exit - выход из программы')
 
 
-# Основной класс сервера
 class Server(threading.Thread, metaclass=ServerVerifier):
+    """ Основной класс сервера."""
     port = Port()
 
     def __init__(self, listen_address, listen_port):
-        # Параметры подключения
+        """ Параметры подключения."""
         self.sock = None
         self.addr = listen_address
         self.port = listen_port
+        self.database = database  # База данных сервера
         self.clients = []  # Список подключённых клиентов.
         self.messages = []  # Список сообщений на отправку.
         self.names = dict()  # Словарь содержащий сопоставленные имена и соответствующие им сокеты.
@@ -72,12 +74,13 @@ class Server(threading.Thread, metaclass=ServerVerifier):
         self.sock.listen()
 
     def run(self):
-        # Инициализация Сокета
+        """ Инициализация Сокета."""
         self.init_socket()
 
-        # Основной цикл программы сервера
         while True:
-            # Ждём подключения, если таймаут вышел, ловим исключение.
+            """ Основной цикл программы сервера.
+             Ждём подключения, если таймаут вышел, 
+             ловим исключение. """
             try:
                 client, client_address = self.sock.accept()
             except OSError:
@@ -115,9 +118,10 @@ class Server(threading.Thread, metaclass=ServerVerifier):
                     del self.names[message[DESTINATION]]
             self.messages.clear()
 
-    # Функция адресной отправки сообщения определённому клиенту. Принимает словарь сообщение, список зарегистрированых
-    # пользователей и слушающие сокеты. Ничего не возвращает.
     def process_message(self, message, listen_socks):
+        """ Функция адресной отправки сообщения определённому клиенту.
+        Принимает словарь сообщение, список зарегистрированных пользователей
+        и слушающие сокеты. Ничего не возвращает."""
         if message[DESTINATION] in self.names and self.names[message[DESTINATION]] in listen_socks:
             send_message(self.names[message[DESTINATION]], message)
             logger.info(f'Отправлено сообщение пользователю {message[DESTINATION]} от пользователя {message[SENDER]}.')
@@ -127,14 +131,13 @@ class Server(threading.Thread, metaclass=ServerVerifier):
             logger.error(
                 f'Пользователь {message[DESTINATION]} не зарегистрирован на сервере, отправка сообщения невозможна.')
 
-    # Обработчик сообщений от клиентов, принимает словарь - сообщение от клиента, проверяет корректность, отправляет
-    #     словарь-ответ в случае необходимости.
     def process_client_message(self, message, client):
+        """ Обработчик сообщений от клиентов,
+        принимает словарь - сообщение от клиента,
+        проверяет корректность,
+        отправляет словарь-ответ в случае необходимости. """
         logger.debug(f'Разбор сообщения от клиента : {message}')
-        # Если это сообщение о присутствии, то принимаем и отвечаем
         if ACTION in message and message[ACTION] == PRESENCE and TIME in message and USER in message:
-            # Если такой пользователь ещё не зарегистрирован, то регистрируем,
-            # иначе отправляем ответ и завершаем соединение.
             if message[USER][ACCOUNT_NAME] not in self.names.keys():
                 self.names[message[USER][ACCOUNT_NAME]] = client
                 client_ip, client_port = client.getpeername()
