@@ -47,7 +47,7 @@ class Server(threading.Thread, metaclass=ServerVerifier):
     """ Основной класс сервера."""
     port = Port()
 
-    def __init__(self, listen_address, listen_port):
+    def __init__(self, listen_address, listen_port, database):
         """ Параметры подключения."""
         self.sock = None
         self.addr = listen_address
