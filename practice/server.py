@@ -9,11 +9,10 @@ import time
 import threading
 import configparser   # https://docs.python.org/3/library/configparser.html
 import logs.config_server_log
-from errors import IncorrectDataRecivedError
 from common.variables import *
 from common.utils import *
-from decos import log
-from descrptrs import Port
+from common.decos import log
+from descryptors import Port
 from metaclasses import ServerVerifier
 from server_database import ServerStorage
 from PyQt5.QtWidgets import QApplication, QMessageBox
@@ -302,7 +301,7 @@ def main():
 
     def show_statistics():
         """
-        Функция, создающая окно со статистикой клиентов
+        Функция создающая окно со статистикой клиентов.
         :return:
         """
         global stat_window

@@ -45,7 +45,9 @@ class ServerVerifier(type):
 
 
 class ClientVerifier(type):
-    """ Метакласс для проверки корректности клиентов:"""
+    """
+    Метакласс для проверки корректности клиентов:
+    """
     def __init__(cls, clsname, bases, clsdict):
         methods = []
         for func in clsdict:
