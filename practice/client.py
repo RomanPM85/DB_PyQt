@@ -1,5 +1,3 @@
-"""Программа-клиент"""
-
 import logging
 import logs.config_client_log
 import argparse
@@ -14,18 +12,13 @@ from client.transport import ClientTransport
 from client.main_window import ClientMainWindow
 from client.start_dialog import UserNameDialog
 
+# Инициализация клиентского логера
 logger = logging.getLogger('client_dist')
-"""
-Инициализация клиентского логирования.
-"""
 
 
+# Парсер аргументов коммандной строки
 @log
 def arg_parser():
-    """
-    Создаём парсер аргументов командной строки
-    и читаем параметры, возвращаем 3 параметра
-    """
     parser = argparse.ArgumentParser()
     parser.add_argument('addr', default=DEFAULT_IP_ADDRESS, nargs='?')
     parser.add_argument('port', default=DEFAULT_PORT, type=int, nargs='?')
@@ -45,46 +38,33 @@ def arg_parser():
     return server_address, server_port, client_name
 
 
+# Основная функция клиента
 if __name__ == '__main__':
+    # Загружаем параметы коммандной строки
     server_address, server_port, client_name = arg_parser()
-    """
-    Загружаем параметры командной строки.
-    """
 
+    # Создаём клиентокое приложение
     client_app = QApplication(sys.argv)
-    """
-    Создаём клиентское приложение.
-    """
 
+    # Если имя пользователя не было указано в командной строке, то запросим его
     if not client_name:
-        """
-        Если имя пользователя не было указано в командной строке,
-         то запросим его.
-        """
         start_dialog = UserNameDialog()
         client_app.exec_()
+        # Если пользователь ввёл имя и нажал ОК, то сохраняем ведённое и удаляем объект.
+        # Иначе - выходим
         if start_dialog.ok_pressed:
-            """
-            Если пользователь ввёл имя и нажал ОК, 
-            то сохраняем ведённое и удаляем объект.
-            """
             client_name = start_dialog.client_name.text()
             del start_dialog
         else:
-            """
-            Иначе - выходим
-            """
             exit(0)
 
-    # Записываем логи.
+    # Записываем логи
     logger.info(
-        f'Запущен клиент с парамерами: адрес сервера: {server_address} , '
+        f'Запущен клиент с парамертами: адрес сервера: {server_address} , '
         f'порт: {server_port}, имя пользователя: {client_name}')
 
+    # Создаём объект базы данных
     database = ClientDatabase(client_name)
-    """
-    Создаём объект базы данных.
-    """
 
     # Создаём объект - транспорт и запускаем транспортный поток
     try:

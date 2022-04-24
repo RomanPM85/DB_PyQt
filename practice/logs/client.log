@@ -296,3 +296,294 @@ Hello Roman
 2022-04-24 14:10:34,197 INFO transport.py Попытка подключения №5
 2022-04-24 14:10:34,984 CRITICAL transport.py Не удалось установить соединение с сервером
 2022-04-24 14:10:35,199 CRITICAL transport.py Не удалось установить соединение с сервером
+2022-04-25 01:11:55,293 INFO client.py Запущен клиент с парамертами: адрес сервера: 127.0.0.1 , порт: 7777, имя пользователя: test1
+2022-04-25 01:11:55,320 INFO transport.py Попытка подключения №1
+2022-04-25 01:11:55,321 DEBUG transport.py Установлено соединение с сервером
+2022-04-25 01:11:55,321 DEBUG transport.py Сформировано presence сообщение для пользователя test1
+2022-04-25 01:11:55,828 INFO client.py Запущен клиент с парамертами: адрес сервера: 127.0.0.1 , порт: 7777, имя пользователя: test2
+2022-04-25 01:11:55,852 DEBUG transport.py Разбор сообщения от сервера: {'response': 200}
+2022-04-25 01:11:55,852 INFO transport.py Соединение с сервером успешно установлено.
+2022-04-25 01:11:55,852 DEBUG transport.py Запрос списка известных пользователей test1
+2022-04-25 01:11:55,853 INFO transport.py Попытка подключения №1
+2022-04-25 01:11:55,853 DEBUG transport.py Установлено соединение с сервером
+2022-04-25 01:11:55,853 DEBUG transport.py Сформировано presence сообщение для пользователя test2
+2022-04-25 01:11:55,868 DEBUG transport.py Запрос контакт листа для пользователя Thread-1
+2022-04-25 01:11:55,868 DEBUG transport.py Сформирован запрос {'action': 'get_contacts', 'time': 1650838315.868437, 'user': 'test1'}
+2022-04-25 01:11:56,364 DEBUG transport.py Получен ответ {'response': 202, 'data_list': []}
+2022-04-25 01:11:56,364 DEBUG transport.py Запущен процесс - приёмник сообщений с сервера.
+2022-04-25 01:11:56,381 DEBUG transport.py Разбор сообщения от сервера: {'response': 200}
+2022-04-25 01:11:56,381 INFO transport.py Соединение с сервером успешно установлено.
+2022-04-25 01:11:56,381 DEBUG transport.py Запрос списка известных пользователей test2
+2022-04-25 01:11:56,901 DEBUG transport.py Запрос контакт листа для пользователя Thread-1
+2022-04-25 01:11:56,902 DEBUG transport.py Сформирован запрос {'action': 'get_contacts', 'time': 1650838316.90206, 'user': 'test2'}
+2022-04-25 01:11:57,389 DEBUG transport.py Получен ответ {'response': 202, 'data_list': []}
+2022-04-25 01:11:57,390 DEBUG transport.py Запущен процесс - приёмник сообщений с сервера.
+2022-04-25 01:12:32,270 DEBUG transport.py Создание контакта test1
+2022-04-25 01:12:32,449 DEBUG transport.py Разбор сообщения от сервера: {'response': 200}
+2022-04-25 01:12:32,465 INFO main_window.py Успешно добавлен контакт <PyQt5.QtGui.QStandardItem object at 0x7ffb263e3280>
+2022-04-25 01:12:48,799 DEBUG transport.py Сформирован словарь сообщения: {'action': 'message', 'from': 'test2', 'to': 'test1', 'time': 1650838368.7990425, 'mess_text': 'Hello test2'}
+2022-04-25 01:12:48,991 DEBUG transport.py Разбор сообщения от сервера: {'response': 200}
+2022-04-25 01:12:48,991 INFO transport.py Отправлено сообщение для пользователя test1
+2022-04-25 01:12:49,000 DEBUG main_window.py Отправлено сообщение для test1: Hello test2
+2022-04-25 01:12:49,938 DEBUG transport.py Принято сообщение с сервера: {'action': 'message', 'from': 'test2', 'to': 'test1', 'time': 1650838368.7990425, 'mess_text': 'Hello test2'}
+2022-04-25 01:12:49,939 DEBUG transport.py Разбор сообщения от сервера: {'action': 'message', 'from': 'test2', 'to': 'test1', 'time': 1650838368.7990425, 'mess_text': 'Hello test2'}
+2022-04-25 01:12:49,939 DEBUG transport.py Получено сообщение от пользователя test2:Hello test2
+2022-04-25 01:13:54,348 DEBUG transport.py Создание контакта client_3
+2022-04-25 01:13:54,586 DEBUG transport.py Разбор сообщения от сервера: {'response': 200}
+2022-04-25 01:13:54,594 INFO main_window.py Успешно добавлен контакт <PyQt5.QtGui.QStandardItem object at 0x7ffb263f9dc0>
+2022-04-25 01:14:05,302 DEBUG transport.py Сформирован словарь сообщения: {'action': 'message', 'from': 'test2', 'to': 'test1', 'time': 1650838445.302427, 'mess_text': 'Hello '}
+2022-04-25 01:14:05,616 DEBUG transport.py Разбор сообщения от сервера: {'response': 200}
+2022-04-25 01:14:05,616 INFO transport.py Отправлено сообщение для пользователя test1
+2022-04-25 01:14:05,625 DEBUG main_window.py Отправлено сообщение для test1: Hello 
+2022-04-25 01:16:15,851 DEBUG transport.py Удаление контакта client_3
+2022-04-25 01:16:16,291 DEBUG transport.py Разбор сообщения от сервера: {'response': 200}
+2022-04-25 01:16:16,299 INFO main_window.py Успешно удалён контакт client_3
+2022-04-25 01:16:23,667 DEBUG transport.py Транспорт завершает работу.
+2022-04-25 01:16:28,293 DEBUG transport.py Транспорт завершает работу.
+2022-04-25 01:16:28,752 DEBUG transport.py Потеряно соединение с сервером.
+2022-04-25 01:16:38,811 INFO client.py Запущен клиент с парамертами: адрес сервера: 127.0.0.1 , порт: 7777, имя пользователя: test1
+2022-04-25 01:16:38,836 INFO transport.py Попытка подключения №1
+2022-04-25 01:16:38,837 DEBUG transport.py Установлено соединение с сервером
+2022-04-25 01:16:38,837 DEBUG transport.py Сформировано presence сообщение для пользователя test1
+2022-04-25 01:16:39,316 INFO client.py Запущен клиент с парамертами: адрес сервера: 127.0.0.1 , порт: 7777, имя пользователя: test2
+2022-04-25 01:16:39,345 INFO transport.py Попытка подключения №1
+2022-04-25 01:16:39,345 DEBUG transport.py Установлено соединение с сервером
+2022-04-25 01:16:39,345 DEBUG transport.py Сформировано presence сообщение для пользователя test2
+2022-04-25 01:16:39,363 DEBUG transport.py Разбор сообщения от сервера: {'response': 200}
+2022-04-25 01:16:39,363 INFO transport.py Соединение с сервером успешно установлено.
+2022-04-25 01:16:39,364 DEBUG transport.py Запрос списка известных пользователей test1
+2022-04-25 01:16:39,376 DEBUG transport.py Разбор сообщения от сервера: {'response': 200}
+2022-04-25 01:16:39,376 INFO transport.py Соединение с сервером успешно установлено.
+2022-04-25 01:16:39,376 DEBUG transport.py Запрос списка известных пользователей test2
+2022-04-25 01:16:39,896 DEBUG transport.py Запрос контакт листа для пользователя Thread-1
+2022-04-25 01:16:39,896 DEBUG transport.py Запрос контакт листа для пользователя Thread-1
+2022-04-25 01:16:39,896 DEBUG transport.py Сформирован запрос {'action': 'get_contacts', 'time': 1650838599.8964593, 'user': 'test2'}
+2022-04-25 01:16:39,896 DEBUG transport.py Сформирован запрос {'action': 'get_contacts', 'time': 1650838599.8964806, 'user': 'test1'}
+2022-04-25 01:16:40,390 DEBUG transport.py Получен ответ {'response': 202, 'data_list': []}
+2022-04-25 01:16:40,390 DEBUG transport.py Запущен процесс - приёмник сообщений с сервера.
+2022-04-25 01:16:40,393 DEBUG transport.py Получен ответ {'response': 202, 'data_list': ['test1']}
+2022-04-25 01:16:40,408 DEBUG transport.py Запущен процесс - приёмник сообщений с сервера.
+2022-04-25 01:16:50,655 DEBUG transport.py Создание контакта test2
+2022-04-25 01:16:51,427 DEBUG transport.py Разбор сообщения от сервера: {'response': 200}
+2022-04-25 01:16:51,444 INFO main_window.py Успешно добавлен контакт <PyQt5.QtGui.QStandardItem object at 0x7fdd2769f280>
+2022-04-25 01:17:08,262 DEBUG transport.py Сформирован словарь сообщения: {'action': 'message', 'from': 'test1', 'to': 'test2', 'time': 1650838628.2624922, 'mess_text': 'Hello test 2'}
+2022-04-25 01:17:08,469 DEBUG transport.py Разбор сообщения от сервера: {'response': 200}
+2022-04-25 01:17:08,469 INFO transport.py Отправлено сообщение для пользователя test2
+2022-04-25 01:17:08,469 DEBUG transport.py Принято сообщение с сервера: {'action': 'message', 'from': 'test1', 'to': 'test2', 'time': 1650838628.2624922, 'mess_text': 'Hello test 2'}
+2022-04-25 01:17:08,470 DEBUG transport.py Разбор сообщения от сервера: {'action': 'message', 'from': 'test1', 'to': 'test2', 'time': 1650838628.2624922, 'mess_text': 'Hello test 2'}
+2022-04-25 01:17:08,470 DEBUG transport.py Получено сообщение от пользователя test1:Hello test 2
+2022-04-25 01:17:25,066 DEBUG transport.py Сформирован словарь сообщения: {'action': 'message', 'from': 'test2', 'to': 'test1', 'time': 1650838645.0668945, 'mess_text': 'Hello test 1'}
+2022-04-25 01:17:25,507 DEBUG transport.py Разбор сообщения от сервера: {'response': 200}
+2022-04-25 01:17:25,508 INFO transport.py Отправлено сообщение для пользователя test1
+2022-04-25 01:17:25,515 DEBUG main_window.py Отправлено сообщение для test1: Hello test 1
+2022-04-25 01:17:26,497 DEBUG transport.py Принято сообщение с сервера: {'action': 'message', 'from': 'test2', 'to': 'test1', 'time': 1650838645.0668945, 'mess_text': 'Hello test 1'}
+2022-04-25 01:17:26,497 DEBUG transport.py Разбор сообщения от сервера: {'action': 'message', 'from': 'test2', 'to': 'test1', 'time': 1650838645.0668945, 'mess_text': 'Hello test 1'}
+2022-04-25 01:17:26,497 DEBUG transport.py Получено сообщение от пользователя test2:Hello test 1
+2022-04-25 01:17:47,333 DEBUG transport.py Сформирован словарь сообщения: {'action': 'message', 'from': 'test1', 'to': 'test2', 'time': 1650838667.3330092, 'mess_text': 'Hello test 2'}
+2022-04-25 01:17:47,551 DEBUG transport.py Разбор сообщения от сервера: {'response': 200}
+2022-04-25 01:17:47,551 INFO transport.py Отправлено сообщение для пользователя test2
+2022-04-25 01:17:48,531 DEBUG transport.py Принято сообщение с сервера: {'action': 'message', 'from': 'test1', 'to': 'test2', 'time': 1650838667.3330092, 'mess_text': 'Hello test 2'}
+2022-04-25 01:17:48,531 DEBUG transport.py Разбор сообщения от сервера: {'action': 'message', 'from': 'test1', 'to': 'test2', 'time': 1650838667.3330092, 'mess_text': 'Hello test 2'}
+2022-04-25 01:17:48,531 DEBUG transport.py Получено сообщение от пользователя test1:Hello test 2
+2022-04-25 01:18:05,980 DEBUG transport.py Транспорт завершает работу.
+2022-04-25 01:25:12,955 INFO client.py Запущен клиент с парамертами: адрес сервера: 127.0.0.1 , порт: 7777, имя пользователя: test1
+2022-04-25 01:25:12,977 INFO transport.py Попытка подключения №1
+2022-04-25 01:25:12,977 DEBUG transport.py Установлено соединение с сервером
+2022-04-25 01:25:12,977 DEBUG transport.py Сформировано presence сообщение для пользователя test1
+2022-04-25 01:25:12,991 DEBUG transport.py Разбор сообщения от сервера: {'response': 200}
+2022-04-25 01:25:12,991 INFO transport.py Соединение с сервером успешно установлено.
+2022-04-25 01:25:12,991 DEBUG transport.py Запрос списка известных пользователей test1
+2022-04-25 01:25:13,486 INFO client.py Запущен клиент с парамертами: адрес сервера: 127.0.0.1 , порт: 7777, имя пользователя: test2
+2022-04-25 01:25:13,505 DEBUG transport.py Запрос контакт листа для пользователя Thread-1
+2022-04-25 01:25:13,505 DEBUG transport.py Сформирован запрос {'action': 'get_contacts', 'time': 1650839113.5058858, 'user': 'test1'}
+2022-04-25 01:25:13,513 INFO transport.py Попытка подключения №1
+2022-04-25 01:25:13,513 DEBUG transport.py Установлено соединение с сервером
+2022-04-25 01:25:13,514 DEBUG transport.py Сформировано presence сообщение для пользователя test2
+2022-04-25 01:25:13,520 DEBUG transport.py Получен ответ {'response': 202, 'data_list': ['test2']}
+2022-04-25 01:25:13,537 DEBUG transport.py Запущен процесс - приёмник сообщений с сервера.
+2022-04-25 01:25:14,034 DEBUG transport.py Разбор сообщения от сервера: {'response': 200}
+2022-04-25 01:25:14,034 INFO transport.py Соединение с сервером успешно установлено.
+2022-04-25 01:25:14,035 DEBUG transport.py Запрос списка известных пользователей test2
+2022-04-25 01:25:14,555 DEBUG transport.py Запрос контакт листа для пользователя Thread-1
+2022-04-25 01:25:14,555 DEBUG transport.py Сформирован запрос {'action': 'get_contacts', 'time': 1650839114.5553474, 'user': 'test2'}
+2022-04-25 01:25:15,042 DEBUG transport.py Получен ответ {'response': 202, 'data_list': ['test1']}
+2022-04-25 01:25:15,060 DEBUG transport.py Запущен процесс - приёмник сообщений с сервера.
+2022-04-25 01:26:08,151 DEBUG transport.py Сформирован словарь сообщения: {'action': 'message', 'from': 'test1', 'to': 'test2', 'time': 1650839168.151757, 'mess_text': 'hi'}
+2022-04-25 01:26:08,626 DEBUG transport.py Разбор сообщения от сервера: {'response': 200}
+2022-04-25 01:26:08,626 INFO transport.py Отправлено сообщение для пользователя test2
+2022-04-25 01:26:08,634 DEBUG transport.py Принято сообщение с сервера: {'action': 'message', 'from': 'test1', 'to': 'test2', 'time': 1650839168.151757, 'mess_text': 'hi'}
+2022-04-25 01:26:08,634 DEBUG transport.py Разбор сообщения от сервера: {'action': 'message', 'from': 'test1', 'to': 'test2', 'time': 1650839168.151757, 'mess_text': 'hi'}
+2022-04-25 01:26:08,634 DEBUG transport.py Получено сообщение от пользователя test1:hi
+2022-04-25 01:26:17,872 DEBUG transport.py Сформирован словарь сообщения: {'action': 'message', 'from': 'test2', 'to': 'test1', 'time': 1650839177.8719647, 'mess_text': 'he'}
+2022-04-25 01:26:18,155 DEBUG transport.py Разбор сообщения от сервера: {'response': 200}
+2022-04-25 01:26:18,155 INFO transport.py Отправлено сообщение для пользователя test1
+2022-04-25 01:26:18,163 DEBUG main_window.py Отправлено сообщение для test1: he
+2022-04-25 01:26:19,147 DEBUG transport.py Принято сообщение с сервера: {'action': 'message', 'from': 'test2', 'to': 'test1', 'time': 1650839177.8719647, 'mess_text': 'he'}
+2022-04-25 01:26:19,147 DEBUG transport.py Разбор сообщения от сервера: {'action': 'message', 'from': 'test2', 'to': 'test1', 'time': 1650839177.8719647, 'mess_text': 'he'}
+2022-04-25 01:26:19,147 DEBUG transport.py Получено сообщение от пользователя test2:he
+2022-04-25 01:26:32,153 DEBUG transport.py Сформирован словарь сообщения: {'action': 'message', 'from': 'test1', 'to': 'test2', 'time': 1650839192.1538153, 'mess_text': 'gh'}
+2022-04-25 01:26:32,188 DEBUG transport.py Разбор сообщения от сервера: {'response': 200}
+2022-04-25 01:26:32,188 INFO transport.py Отправлено сообщение для пользователя test2
+2022-04-25 01:26:32,188 DEBUG transport.py Принято сообщение с сервера: {'action': 'message', 'from': 'test1', 'to': 'test2', 'time': 1650839192.1538153, 'mess_text': 'gh'}
+2022-04-25 01:26:32,188 DEBUG transport.py Разбор сообщения от сервера: {'action': 'message', 'from': 'test1', 'to': 'test2', 'time': 1650839192.1538153, 'mess_text': 'gh'}
+2022-04-25 01:26:32,188 DEBUG transport.py Получено сообщение от пользователя test1:gh
+2022-04-25 01:26:37,059 DEBUG transport.py Транспорт завершает работу.
+2022-04-25 01:26:39,776 DEBUG transport.py Транспорт завершает работу.
+2022-04-25 01:26:40,708 DEBUG transport.py Потеряно соединение с сервером.
+2022-04-25 01:27:32,880 INFO client.py Запущен клиент с парамертами: адрес сервера: 127.0.0.1 , порт: 7777, имя пользователя: test1
+2022-04-25 01:27:32,904 INFO transport.py Попытка подключения №1
+2022-04-25 01:27:32,904 DEBUG transport.py Установлено соединение с сервером
+2022-04-25 01:27:32,904 DEBUG transport.py Сформировано presence сообщение для пользователя test1
+2022-04-25 01:27:33,405 INFO client.py Запущен клиент с парамертами: адрес сервера: 127.0.0.1 , порт: 7777, имя пользователя: test2
+2022-04-25 01:27:33,429 DEBUG transport.py Разбор сообщения от сервера: {'response': 200}
+2022-04-25 01:27:33,429 INFO transport.py Соединение с сервером успешно установлено.
+2022-04-25 01:27:33,430 DEBUG transport.py Запрос списка известных пользователей test1
+2022-04-25 01:27:33,434 INFO transport.py Попытка подключения №1
+2022-04-25 01:27:33,435 DEBUG transport.py Установлено соединение с сервером
+2022-04-25 01:27:33,435 DEBUG transport.py Сформировано presence сообщение для пользователя test2
+2022-04-25 01:27:33,447 DEBUG transport.py Запрос контакт листа для пользователя Thread-1
+2022-04-25 01:27:33,447 DEBUG transport.py Сформирован запрос {'action': 'get_contacts', 'time': 1650839253.4474652, 'user': 'test1'}
+2022-04-25 01:27:33,946 DEBUG transport.py Получен ответ {'response': 202, 'data_list': ['test2']}
+2022-04-25 01:27:33,962 DEBUG transport.py Разбор сообщения от сервера: {'response': 200}
+2022-04-25 01:27:33,963 INFO transport.py Соединение с сервером успешно установлено.
+2022-04-25 01:27:33,963 DEBUG transport.py Запрос списка известных пользователей test2
+2022-04-25 01:27:33,964 DEBUG transport.py Запущен процесс - приёмник сообщений с сервера.
+2022-04-25 01:27:34,480 DEBUG transport.py Запрос контакт листа для пользователя Thread-1
+2022-04-25 01:27:34,480 DEBUG transport.py Сформирован запрос {'action': 'get_contacts', 'time': 1650839254.4803956, 'user': 'test2'}
+2022-04-25 01:27:34,969 DEBUG transport.py Получен ответ {'response': 202, 'data_list': ['test1']}
+2022-04-25 01:27:34,992 DEBUG transport.py Запущен процесс - приёмник сообщений с сервера.
+2022-04-25 01:27:56,641 INFO client.py Запущен клиент с парамертами: адрес сервера: 127.0.0.1 , порт: 7777, имя пользователя: Roman
+2022-04-25 01:27:56,698 INFO transport.py Попытка подключения №1
+2022-04-25 01:27:56,698 DEBUG transport.py Установлено соединение с сервером
+2022-04-25 01:27:56,698 DEBUG transport.py Сформировано presence сообщение для пользователя Roman
+2022-04-25 01:27:57,221 DEBUG transport.py Разбор сообщения от сервера: {'response': 200}
+2022-04-25 01:27:57,221 INFO transport.py Соединение с сервером успешно установлено.
+2022-04-25 01:27:57,221 DEBUG transport.py Запрос списка известных пользователей Roman
+2022-04-25 01:27:57,734 DEBUG transport.py Запрос контакт листа для пользователя Thread-1
+2022-04-25 01:27:57,734 DEBUG transport.py Сформирован запрос {'action': 'get_contacts', 'time': 1650839277.734407, 'user': 'Roman'}
+2022-04-25 01:27:58,228 DEBUG transport.py Получен ответ {'response': 202, 'data_list': []}
+2022-04-25 01:27:58,228 DEBUG transport.py Запущен процесс - приёмник сообщений с сервера.
+2022-04-25 01:28:06,061 DEBUG transport.py Создание контакта test1
+2022-04-25 01:28:06,259 DEBUG transport.py Разбор сообщения от сервера: {'response': 200}
+2022-04-25 01:28:06,273 INFO main_window.py Успешно добавлен контакт <PyQt5.QtGui.QStandardItem object at 0x7f1c34ddc670>
+2022-04-25 01:28:12,543 DEBUG transport.py Создание контакта test2
+2022-04-25 01:28:12,784 DEBUG transport.py Разбор сообщения от сервера: {'response': 200}
+2022-04-25 01:28:12,793 INFO main_window.py Успешно добавлен контакт <PyQt5.QtGui.QStandardItem object at 0x7f1c3447bca0>
+2022-04-25 01:28:24,274 DEBUG transport.py Сформирован словарь сообщения: {'action': 'message', 'from': 'Roman', 'to': 'test1', 'time': 1650839304.274371, 'mess_text': 'Hello test1'}
+2022-04-25 01:28:24,320 DEBUG transport.py Разбор сообщения от сервера: {'response': 200}
+2022-04-25 01:28:24,320 INFO transport.py Отправлено сообщение для пользователя test1
+2022-04-25 01:28:24,328 DEBUG main_window.py Отправлено сообщение для test1: Hello test1
+2022-04-25 01:28:24,557 DEBUG transport.py Принято сообщение с сервера: {'action': 'message', 'from': 'Roman', 'to': 'test1', 'time': 1650839304.274371, 'mess_text': 'Hello test1'}
+2022-04-25 01:28:24,557 DEBUG transport.py Разбор сообщения от сервера: {'action': 'message', 'from': 'Roman', 'to': 'test1', 'time': 1650839304.274371, 'mess_text': 'Hello test1'}
+2022-04-25 01:28:24,557 DEBUG transport.py Получено сообщение от пользователя Roman:Hello test1
+2022-04-25 01:28:34,912 DEBUG transport.py Сформирован словарь сообщения: {'action': 'message', 'from': 'Roman', 'to': 'test2', 'time': 1650839314.912508, 'mess_text': 'Hello test 2'}
+2022-04-25 01:28:35,351 DEBUG transport.py Разбор сообщения от сервера: {'response': 200}
+2022-04-25 01:28:35,351 INFO transport.py Отправлено сообщение для пользователя test2
+2022-04-25 01:28:35,360 DEBUG main_window.py Отправлено сообщение для test2: Hello test 2
+2022-04-25 01:28:36,095 DEBUG transport.py Принято сообщение с сервера: {'action': 'message', 'from': 'Roman', 'to': 'test2', 'time': 1650839314.912508, 'mess_text': 'Hello test 2'}
+2022-04-25 01:28:36,095 DEBUG transport.py Разбор сообщения от сервера: {'action': 'message', 'from': 'Roman', 'to': 'test2', 'time': 1650839314.912508, 'mess_text': 'Hello test 2'}
+2022-04-25 01:28:36,095 DEBUG transport.py Получено сообщение от пользователя Roman:Hello test 2
+2022-04-25 01:28:37,710 DEBUG transport.py Создание контакта Roman
+2022-04-25 01:28:37,870 DEBUG transport.py Разбор сообщения от сервера: {'response': 200}
+2022-04-25 01:28:37,880 INFO main_window.py Успешно добавлен контакт <PyQt5.QtGui.QStandardItem object at 0x7f3d1b627280>
+2022-04-25 01:28:52,195 DEBUG transport.py Сформирован словарь сообщения: {'action': 'message', 'from': 'test2', 'to': 'Roman', 'time': 1650839332.195029, 'mess_text': 'Hello Roman'}
+2022-04-25 01:28:52,909 DEBUG transport.py Разбор сообщения от сервера: {'response': 200}
+2022-04-25 01:28:52,909 INFO transport.py Отправлено сообщение для пользователя Roman
+2022-04-25 01:28:52,917 DEBUG main_window.py Отправлено сообщение для Roman: Hello Roman
+2022-04-25 01:28:53,378 DEBUG transport.py Принято сообщение с сервера: {'action': 'message', 'from': 'test2', 'to': 'Roman', 'time': 1650839332.195029, 'mess_text': 'Hello Roman'}
+2022-04-25 01:28:53,378 DEBUG transport.py Разбор сообщения от сервера: {'action': 'message', 'from': 'test2', 'to': 'Roman', 'time': 1650839332.195029, 'mess_text': 'Hello Roman'}
+2022-04-25 01:28:53,379 DEBUG transport.py Получено сообщение от пользователя test2:Hello Roman
+2022-04-25 01:29:20,657 DEBUG transport.py Сформирован словарь сообщения: {'action': 'message', 'from': 'Roman', 'to': 'test1', 'time': 1650839360.6573412, 'mess_text': 'Hello test 1'}
+2022-04-25 01:29:20,960 DEBUG transport.py Разбор сообщения от сервера: {'response': 200}
+2022-04-25 01:29:20,960 INFO transport.py Отправлено сообщение для пользователя test1
+2022-04-25 01:29:20,969 DEBUG main_window.py Отправлено сообщение для test1: Hello test 1
+2022-04-25 01:29:36,932 DEBUG transport.py Транспорт завершает работу.
+2022-04-25 01:29:54,694 DEBUG transport.py Сформирован словарь сообщения: {'action': 'message', 'from': 'test2', 'to': 'Roman', 'time': 1650839394.693959, 'mess_text': 'Hello Roman new'}
+2022-04-25 01:29:55,033 DEBUG transport.py Разбор сообщения от сервера: {'response': 200}
+2022-04-25 01:29:55,033 INFO transport.py Отправлено сообщение для пользователя Roman
+2022-04-25 01:29:55,040 DEBUG main_window.py Отправлено сообщение для Roman: Hello Roman new
+2022-04-25 01:29:55,971 DEBUG transport.py Принято сообщение с сервера: {'action': 'message', 'from': 'test2', 'to': 'Roman', 'time': 1650839394.693959, 'mess_text': 'Hello Roman new'}
+2022-04-25 01:29:55,971 DEBUG transport.py Разбор сообщения от сервера: {'action': 'message', 'from': 'test2', 'to': 'Roman', 'time': 1650839394.693959, 'mess_text': 'Hello Roman new'}
+2022-04-25 01:29:55,971 DEBUG transport.py Получено сообщение от пользователя test2:Hello Roman new
+2022-04-25 01:30:15,408 DEBUG transport.py Сформирован словарь сообщения: {'action': 'message', 'from': 'Roman', 'to': 'test2', 'time': 1650839415.4084013, 'mess_text': 'Hello test 2 to'}
+2022-04-25 01:30:15,573 DEBUG transport.py Разбор сообщения от сервера: {'response': 200}
+2022-04-25 01:30:15,574 INFO transport.py Отправлено сообщение для пользователя test2
+2022-04-25 01:30:15,582 DEBUG main_window.py Отправлено сообщение для test2: Hello test 2 to
+2022-04-25 01:30:16,246 DEBUG transport.py Принято сообщение с сервера: {'action': 'message', 'from': 'Roman', 'to': 'test2', 'time': 1650839415.4084013, 'mess_text': 'Hello test 2 to'}
+2022-04-25 01:30:16,247 DEBUG transport.py Разбор сообщения от сервера: {'action': 'message', 'from': 'Roman', 'to': 'test2', 'time': 1650839415.4084013, 'mess_text': 'Hello test 2 to'}
+2022-04-25 01:30:16,247 DEBUG transport.py Получено сообщение от пользователя Roman:Hello test 2 to
+2022-04-25 01:31:21,093 DEBUG transport.py Потеряно соединение с сервером.
+2022-04-25 01:31:23,606 DEBUG transport.py Транспорт завершает работу.
+2022-04-25 01:32:55,716 INFO client.py Запущен клиент с парамертами: адрес сервера: 127.0.0.1 , порт: 7777, имя пользователя: test1
+2022-04-25 01:32:55,739 INFO transport.py Попытка подключения №1
+2022-04-25 01:32:55,739 DEBUG transport.py Установлено соединение с сервером
+2022-04-25 01:32:55,739 DEBUG transport.py Сформировано presence сообщение для пользователя test1
+2022-04-25 01:32:55,756 DEBUG transport.py Разбор сообщения от сервера: {'response': 200}
+2022-04-25 01:32:55,756 INFO transport.py Соединение с сервером успешно установлено.
+2022-04-25 01:32:55,756 DEBUG transport.py Запрос списка известных пользователей test1
+2022-04-25 01:32:56,233 INFO client.py Запущен клиент с парамертами: адрес сервера: 127.0.0.1 , порт: 7777, имя пользователя: test2
+2022-04-25 01:32:56,261 INFO transport.py Попытка подключения №1
+2022-04-25 01:32:56,262 DEBUG transport.py Установлено соединение с сервером
+2022-04-25 01:32:56,262 DEBUG transport.py Сформировано presence сообщение для пользователя test2
+2022-04-25 01:32:56,270 DEBUG transport.py Запрос контакт листа для пользователя Thread-1
+2022-04-25 01:32:56,270 DEBUG transport.py Сформирован запрос {'action': 'get_contacts', 'time': 1650839576.270273, 'user': 'test1'}
+2022-04-25 01:32:56,770 DEBUG transport.py Получен ответ {'response': 202, 'data_list': ['test2']}
+2022-04-25 01:32:56,782 DEBUG transport.py Разбор сообщения от сервера: {'response': 200}
+2022-04-25 01:32:56,782 INFO transport.py Соединение с сервером успешно установлено.
+2022-04-25 01:32:56,782 DEBUG transport.py Запрос списка известных пользователей test2
+2022-04-25 01:32:56,789 DEBUG transport.py Запущен процесс - приёмник сообщений с сервера.
+2022-04-25 01:32:57,297 DEBUG transport.py Запрос контакт листа для пользователя Thread-1
+2022-04-25 01:32:57,297 DEBUG transport.py Сформирован запрос {'action': 'get_contacts', 'time': 1650839577.2976522, 'user': 'test2'}
+2022-04-25 01:32:57,789 DEBUG transport.py Получен ответ {'response': 202, 'data_list': ['test1', 'Roman']}
+2022-04-25 01:32:57,815 DEBUG transport.py Запущен процесс - приёмник сообщений с сервера.
+2022-04-25 01:33:14,296 DEBUG transport.py Сформирован словарь сообщения: {'action': 'message', 'from': 'test1', 'to': 'test2', 'time': 1650839594.2960877, 'mess_text': 'Hi'}
+2022-04-25 01:33:14,328 DEBUG transport.py Разбор сообщения от сервера: {'response': 200}
+2022-04-25 01:33:14,328 INFO transport.py Отправлено сообщение для пользователя test2
+2022-04-25 01:33:14,328 DEBUG transport.py Принято сообщение с сервера: {'action': 'message', 'from': 'test1', 'to': 'test2', 'time': 1650839594.2960877, 'mess_text': 'Hi'}
+2022-04-25 01:33:14,328 DEBUG transport.py Разбор сообщения от сервера: {'action': 'message', 'from': 'test1', 'to': 'test2', 'time': 1650839594.2960877, 'mess_text': 'Hi'}
+2022-04-25 01:33:14,328 DEBUG transport.py Получено сообщение от пользователя test1:Hi
+2022-04-25 01:33:21,558 DEBUG transport.py Сформирован словарь сообщения: {'action': 'message', 'from': 'test2', 'to': 'test1', 'time': 1650839601.5583684, 'mess_text': 'He'}
+2022-04-25 01:33:22,357 DEBUG transport.py Разбор сообщения от сервера: {'response': 200}
+2022-04-25 01:33:22,357 INFO transport.py Отправлено сообщение для пользователя test1
+2022-04-25 01:33:22,365 DEBUG main_window.py Отправлено сообщение для test1: He
+2022-04-25 01:33:23,349 DEBUG transport.py Принято сообщение с сервера: {'action': 'message', 'from': 'test2', 'to': 'test1', 'time': 1650839601.5583684, 'mess_text': 'He'}
+2022-04-25 01:33:23,349 DEBUG transport.py Разбор сообщения от сервера: {'action': 'message', 'from': 'test2', 'to': 'test1', 'time': 1650839601.5583684, 'mess_text': 'He'}
+2022-04-25 01:33:23,349 DEBUG transport.py Получено сообщение от пользователя test2:He
+2022-04-25 01:33:58,682 INFO client.py Запущен клиент с парамертами: адрес сервера: 127.0.0.1 , порт: 7777, имя пользователя: User-1
+2022-04-25 01:33:58,732 INFO transport.py Попытка подключения №1
+2022-04-25 01:33:58,733 DEBUG transport.py Установлено соединение с сервером
+2022-04-25 01:33:58,733 DEBUG transport.py Сформировано presence сообщение для пользователя User-1
+2022-04-25 01:33:59,257 DEBUG transport.py Разбор сообщения от сервера: {'response': 200}
+2022-04-25 01:33:59,257 INFO transport.py Соединение с сервером успешно установлено.
+2022-04-25 01:33:59,257 DEBUG transport.py Запрос списка известных пользователей User-1
+2022-04-25 01:33:59,773 DEBUG transport.py Запрос контакт листа для пользователя Thread-1
+2022-04-25 01:33:59,773 DEBUG transport.py Сформирован запрос {'action': 'get_contacts', 'time': 1650839639.7739685, 'user': 'User-1'}
+2022-04-25 01:34:00,264 DEBUG transport.py Получен ответ {'response': 202, 'data_list': []}
+2022-04-25 01:34:00,264 DEBUG transport.py Запущен процесс - приёмник сообщений с сервера.
+2022-04-25 01:34:07,409 DEBUG transport.py Создание контакта Roman
+2022-04-25 01:34:08,292 DEBUG transport.py Разбор сообщения от сервера: {'response': 200}
+2022-04-25 01:34:08,308 INFO main_window.py Успешно добавлен контакт <PyQt5.QtGui.QStandardItem object at 0x7f68b8563790>
+2022-04-25 01:34:15,027 DEBUG transport.py Создание контакта test2
+2022-04-25 01:34:15,312 DEBUG transport.py Разбор сообщения от сервера: {'response': 200}
+2022-04-25 01:34:15,323 INFO main_window.py Успешно добавлен контакт <PyQt5.QtGui.QStandardItem object at 0x7f68b8563dc0>
+2022-04-25 01:34:26,297 DEBUG transport.py Сформирован словарь сообщения: {'action': 'message', 'from': 'User-1', 'to': 'Roman', 'time': 1650839666.2975614, 'mess_text': 'Hello Roman'}
+2022-04-25 01:34:26,327 DEBUG transport.py Разбор сообщения от сервера: {'response': 400, 'error': 'Пользователь не зарегистрирован на сервере.'}
+2022-04-25 01:34:54,812 DEBUG transport.py Сформирован словарь сообщения: {'action': 'message', 'from': 'User-1', 'to': 'test2', 'time': 1650839694.8120043, 'mess_text': 'Hello Test2'}
+2022-04-25 01:34:54,879 DEBUG transport.py Разбор сообщения от сервера: {'response': 200}
+2022-04-25 01:34:54,880 INFO transport.py Отправлено сообщение для пользователя test2
+2022-04-25 01:34:54,880 DEBUG transport.py Принято сообщение с сервера: {'action': 'message', 'from': 'User-1', 'to': 'test2', 'time': 1650839694.8120043, 'mess_text': 'Hello Test2'}
+2022-04-25 01:34:54,880 DEBUG transport.py Разбор сообщения от сервера: {'action': 'message', 'from': 'User-1', 'to': 'test2', 'time': 1650839694.8120043, 'mess_text': 'Hello Test2'}
+2022-04-25 01:34:54,880 DEBUG transport.py Получено сообщение от пользователя User-1:Hello Test2
+2022-04-25 01:34:54,893 DEBUG main_window.py Отправлено сообщение для test2: Hello Test2
+2022-04-25 01:34:56,163 DEBUG transport.py Создание контакта User-1
+2022-04-25 01:34:56,899 DEBUG transport.py Разбор сообщения от сервера: {'response': 200}
+2022-04-25 01:34:56,910 INFO main_window.py Успешно добавлен контакт <PyQt5.QtGui.QStandardItem object at 0x7f90a59e14c0>
+2022-04-25 01:35:08,488 DEBUG transport.py Сформирован словарь сообщения: {'action': 'message', 'from': 'test2', 'to': 'User-1', 'time': 1650839708.4884276, 'mess_text': 'Hello User 1'}
+2022-04-25 01:35:08,932 DEBUG transport.py Разбор сообщения от сервера: {'response': 200}
+2022-04-25 01:35:08,932 INFO transport.py Отправлено сообщение для пользователя User-1
+2022-04-25 01:35:08,932 DEBUG transport.py Принято сообщение с сервера: {'action': 'message', 'from': 'test2', 'to': 'User-1', 'time': 1650839708.4884276, 'mess_text': 'Hello User 1'}
+2022-04-25 01:35:08,932 DEBUG transport.py Разбор сообщения от сервера: {'action': 'message', 'from': 'test2', 'to': 'User-1', 'time': 1650839708.4884276, 'mess_text': 'Hello User 1'}
+2022-04-25 01:35:08,932 DEBUG transport.py Получено сообщение от пользователя test2:Hello User 1
+2022-04-25 01:35:08,942 DEBUG main_window.py Отправлено сообщение для User-1: Hello User 1
+2022-04-25 01:35:52,347 DEBUG transport.py Потеряно соединение с сервером.
+2022-04-25 01:35:54,147 DEBUG transport.py Транспорт завершает работу.

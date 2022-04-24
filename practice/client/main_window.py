@@ -5,6 +5,7 @@ import sys
 import json
 import logging
 
+sys.path.append('../')
 from client.main_window_conv import Ui_MainClientWindow
 from client.add_contact import AddContactDialog
 from client.del_contact import DelContactDialog
@@ -12,8 +13,6 @@ from client.database import ClientDatabase
 from client.transport import ClientTransport
 from client.start_dialog import UserNameDialog
 from common.errors import ServerError
-
-sys.path.append('../')
 
 logger = logging.getLogger('client_dist')
 

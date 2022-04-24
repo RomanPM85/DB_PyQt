@@ -4,15 +4,12 @@ import time
 import logging
 import json
 import threading
-
 from PyQt5.QtCore import pyqtSignal, QObject
 
+sys.path.append('../')
 from common.utils import *
 from common.variables import *
 from common.errors import ServerError
-from common.variables import GET_CONTACTS
-
-sys.path.append('../')
 
 # Логер и объект блокировки для работы с сокетом.
 logger = logging.getLogger('client_dist')
