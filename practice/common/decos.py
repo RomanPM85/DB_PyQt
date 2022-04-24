@@ -7,11 +7,15 @@ import logs.config_client_log
 
 # метод определения модуля, источника запуска.
 if sys.argv[0].find('client_dist') == -1:
-    # если не клиент, то сервер!
     logger = logging.getLogger('server_dist')
+    """
+    если не клиент, то сервер!
+    """
 else:
-    # если не сервер, то клиент
     logger = logging.getLogger('client_dist')
+    """
+    если не сервер, то клиент.
+    """
 
 
 def log(func_to_log):

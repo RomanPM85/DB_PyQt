@@ -1,15 +1,34 @@
-"""Константы"""
-
 import logging
 
-DEFAULT_PORT = 7777  # Порт по умолчанию для сетевого взаимодействия
-DEFAULT_IP_ADDRESS = '127.0.0.1'  # IP адрес по умолчанию для подключения клиента
-MAX_CONNECTIONS = 5  # Максимальная очередь подключений
-MAX_PACKAGE_LENGTH = 1024  # Максимальная длинна сообщения в байтах
-ENCODING = 'utf-8'  # Кодировка проекта
-LOGGING_LEVEL = logging.DEBUG  # Текущий уровень логирования
-# SERVER_DATABASE = 'sqlite:///server_base.db3'  # База данных для хранения данных сервера:
-SERVER_CONFIG = 'server_dist.ini'
+DEFAULT_PORT = 7777
+"""
+Порт по умолчанию для сетевого взаимодействия
+"""
+DEFAULT_IP_ADDRESS = '127.0.0.1'
+"""
+IP адрес по умолчанию для подключения клиента.
+"""
+MAX_CONNECTIONS = 5
+"""
+Максимальная очередь подключений.
+"""
+MAX_PACKAGE_LENGTH = 1024
+"""
+Максимальная длинна сообщения в байтах
+"""
+ENCODING = 'utf-8'
+"""
+Кодировка проекта.
+"""
+LOGGING_LEVEL = logging.DEBUG
+"""
+Текущий уровень логирования
+"""
+# SERVER_DATABASE = 'sqlite:///server_base.db3'
+SERVER_CONFIG = 'server_dist+++.ini'
+"""
+База данных для хранения данных сервера:
+"""
 # Протокол JIM основные ключи:
 ACTION = 'action'
 TIME = 'time'

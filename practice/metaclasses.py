@@ -11,13 +11,25 @@ class ServerVerifier(type):
     """ Метакласс для проверки соответствия сервера: """
     def __init__(cls, clsname, bases, clsdict):
         methods = []
+        """
+        Список методов, которые используются в функциях класса:
+        """
         attrs = []
+        """
+        Атрибуты, вызываемые функциями классов.
+        """
         for func in clsdict:
             try:
                 ret = dis.get_instructions(clsdict[func])
+                """
+                Если не функция то ловим исключение.
+                """
             except TypeError:
                 pass
             else:
+                """
+                Раз функция разбираем код, получая используемые методы и атрибуты.
+                """
                 for i in ret:
                     if i.opname == 'LOAD_GLOBAL':
                         if i.argval not in methods:
