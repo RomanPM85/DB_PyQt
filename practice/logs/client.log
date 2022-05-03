@@ -1369,3 +1369,67 @@ Hello Roman
 2022-05-03 13:31:40,747 DEBUG client.py Transport ready.
 2022-05-03 13:31:40,747 DEBUG transport.py Запущен процесс - приёмник собщений с сервера.
 2022-05-03 13:32:03,756 DEBUG transport.py Транспорт завершает работу.
+2022-05-03 13:41:35,941 DEBUG client.py Args loaded
+2022-05-03 13:41:36,166 INFO client.py Запущен клиент с параметрами: адрес сервера: 127.0.0.1 , порт: 7777, имя пользователя: test1
+2022-05-03 13:41:36,239 DEBUG client.py Keys successfully loaded.
+2022-05-03 13:41:36,266 INFO transport.py Попытка подключения №1
+2022-05-03 13:41:36,266 DEBUG transport.py Connection established.
+2022-05-03 13:41:36,267 DEBUG transport.py Starting auth dialog.
+2022-05-03 13:41:36,283 DEBUG transport.py Passwd hash ready: b'49b70501d4d72ff5522a79cf779df86656a057282ac9ab564efb80fcba4fbc484bedcf52b3fb233d9b7b91337becc542ec3256a0269deddfedbce7275f44a781'
+2022-05-03 13:41:36,284 DEBUG transport.py Presense message = {'action': 'presence', 'time': 1651574496.2847142, 'user': {'account_name': 'test1', 'pubkey': '-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAmKN/CFSxgU8eu0oO0oKw\n29WTZQSfqw/mJgEtr8nLUAOHGcg3kT7epUgPfwbo/V67sJlGhb/UD7dPK81utWRn\nFKhhUGuo+ad/4HnvbSQjIHy2Wbr85T4gJCL1IqTkodAgSOo4Nuv/Qq9r5po0dNIC\nF4YTZrzfCy6V0v349iXM2CXf+/14fHCxsm3OkNCUwHsOW6nzh5fIyAs1UhssJm/Z\nbCNzX5PkRjI7bwBJhoXHNgS1fDyII6vGrQAyAwxU0hKrBAtAzYIon5ZlIYxyF2/5\nKb8IVmLmnrvCpmtjTQ4u80Dp6YuErMCD82GzgUi50UdQoW617AmFxaKpvO7Lu+aA\nfwIDAQAB\n-----END PUBLIC KEY-----'}}
+2022-05-03 13:41:36,469 DEBUG client.py Args loaded
+2022-05-03 13:41:36,704 INFO client.py Запущен клиент с параметрами: адрес сервера: 127.0.0.1 , порт: 7777, имя пользователя: test2
+2022-05-03 13:41:36,774 DEBUG client.py Keys successfully loaded.
+2022-05-03 13:41:36,775 DEBUG transport.py Server response = {'response': 511, 'bin': '491851ff55ceb68a218a0b53126ec35cb1d2d0be98ac2890d7f3b35facfc7cfb465e0f069fb68cbb1fe94866ce109803c9aea200b7380f72238c706606e01e2f'}.
+2022-05-03 13:41:36,775 DEBUG transport.py Разбор сообщения от сервера: {'response': 200}
+2022-05-03 13:41:36,776 DEBUG transport.py Запрос списка известных пользователей test1
+2022-05-03 13:41:36,796 INFO transport.py Попытка подключения №1
+2022-05-03 13:41:36,796 DEBUG transport.py Connection established.
+2022-05-03 13:41:36,796 DEBUG transport.py Starting auth dialog.
+2022-05-03 13:41:36,811 DEBUG transport.py Passwd hash ready: b'6c95daf460f03d00239959faac8387d157dafbe382cd684426a295cd37fbcb0e4d874cae7b07017717c8acaff862f6241d4eaeea2366f6a7b5076a8c72035cd6'
+2022-05-03 13:41:36,813 DEBUG transport.py Presense message = {'action': 'presence', 'time': 1651574496.8130348, 'user': {'account_name': 'test2', 'pubkey': '-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAtrfkZ/5Xtj72x44QP9b5\neTenYYlSJkkb6X+jL4pqATUwGcvvcxBDtRrR0j1VZzhdlUvetoA3MvecULu3jTvg\nRhcrRHQRIzgMSjNV9ZGFBqhZvQmwGJEDI72dAjLyb1e5t1fT45o2DRfA+Zgxt+N0\ntTIgV7xIQiJrkGkaTje1oXqa9a1MH3o2bMLyrnfv2FE3SKdEQK5GUy+ec0P42QUx\njQ4GG2tEVYHJHS8tiQ+Rwz2Qcubs2YeqmLiUP6ZNdRLEZxn4YN0YNsTPEYzre2qo\n/nAAuWSixjOzt8OQQoSlOjL+VcDZBTitNSmnCMtjcVeTj36J5jUsc3onQofaWf1M\npQIDAQAB\n-----END PUBLIC KEY-----'}}
+2022-05-03 13:41:36,813 DEBUG transport.py Запрос контакт листа для пользователся Thread-1
+2022-05-03 13:41:36,813 DEBUG transport.py Сформирован запрос {'action': 'get_contacts', 'time': 1651574496.813485, 'user': 'test1'}
+2022-05-03 13:41:37,307 DEBUG transport.py Получен ответ {'response': 202, 'data_list': ['test2', 'Roman', 'Nadezhda']}
+2022-05-03 13:41:37,309 DEBUG transport.py Server response = {'response': 511, 'bin': '43f14bebbd7e5f8cc4e8fe27d26761d34fd60368da761c33444040c4a2ac5de12db2be496972243b9c8eca8b1efaa090f81c5b81e4b6048393de444308bd4828'}.
+2022-05-03 13:41:37,310 DEBUG transport.py Разбор сообщения от сервера: {'response': 200}
+2022-05-03 13:41:37,310 DEBUG transport.py Запрос списка известных пользователей test2
+2022-05-03 13:41:37,335 DEBUG client.py Transport ready.
+2022-05-03 13:41:37,335 DEBUG transport.py Запущен процесс - приёмник собщений с сервера.
+2022-05-03 13:41:37,846 DEBUG transport.py Запрос контакт листа для пользователся Thread-1
+2022-05-03 13:41:37,846 DEBUG transport.py Сформирован запрос {'action': 'get_contacts', 'time': 1651574497.8464892, 'user': 'test2'}
+2022-05-03 13:41:38,331 DEBUG transport.py Получен ответ {'response': 202, 'data_list': ['test1', 'Roman', 'Nadezhda']}
+2022-05-03 13:41:38,364 DEBUG client.py Transport ready.
+2022-05-03 13:41:38,365 DEBUG transport.py Запущен процесс - приёмник собщений с сервера.
+2022-05-03 13:56:05,559 DEBUG client.py Args loaded
+2022-05-03 13:56:05,773 INFO client.py Запущен клиент с параметрами: адрес сервера: 127.0.0.1 , порт: 7777, имя пользователя: test1
+2022-05-03 13:56:05,859 DEBUG client.py Keys successfully loaded.
+2022-05-03 13:56:05,883 INFO transport.py Попытка подключения №1
+2022-05-03 13:56:05,884 DEBUG transport.py Connection established.
+2022-05-03 13:56:05,884 DEBUG transport.py Starting auth dialog.
+2022-05-03 13:56:05,896 DEBUG transport.py Passwd hash ready: b'49b70501d4d72ff5522a79cf779df86656a057282ac9ab564efb80fcba4fbc484bedcf52b3fb233d9b7b91337becc542ec3256a0269deddfedbce7275f44a781'
+2022-05-03 13:56:05,897 DEBUG transport.py Presense message = {'action': 'presence', 'time': 1651575365.8973129, 'user': {'account_name': 'test1', 'pubkey': '-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAmKN/CFSxgU8eu0oO0oKw\n29WTZQSfqw/mJgEtr8nLUAOHGcg3kT7epUgPfwbo/V67sJlGhb/UD7dPK81utWRn\nFKhhUGuo+ad/4HnvbSQjIHy2Wbr85T4gJCL1IqTkodAgSOo4Nuv/Qq9r5po0dNIC\nF4YTZrzfCy6V0v349iXM2CXf+/14fHCxsm3OkNCUwHsOW6nzh5fIyAs1UhssJm/Z\nbCNzX5PkRjI7bwBJhoXHNgS1fDyII6vGrQAyAwxU0hKrBAtAzYIon5ZlIYxyF2/5\nKb8IVmLmnrvCpmtjTQ4u80Dp6YuErMCD82GzgUi50UdQoW617AmFxaKpvO7Lu+aA\nfwIDAQAB\n-----END PUBLIC KEY-----'}}
+2022-05-03 13:56:06,031 DEBUG client.py Args loaded
+2022-05-03 13:56:06,268 INFO client.py Запущен клиент с параметрами: адрес сервера: 127.0.0.1 , порт: 7777, имя пользователя: test2
+2022-05-03 13:56:06,333 DEBUG client.py Keys successfully loaded.
+2022-05-03 13:56:06,354 INFO transport.py Попытка подключения №1
+2022-05-03 13:56:06,355 DEBUG transport.py Connection established.
+2022-05-03 13:56:06,355 DEBUG transport.py Starting auth dialog.
+2022-05-03 13:56:06,361 DEBUG transport.py Server response = {'response': 511, 'bin': 'bbffb0d6c50cc36947e2aaab7afa66467ddff8dec87c37d43ce292067d0131812c6066f37edde70be088fcd3f067cb8899b6a5eb5a627e67b1e88c31d8e46ad3'}.
+2022-05-03 13:56:06,362 DEBUG transport.py Разбор сообщения от сервера: {'response': 200}
+2022-05-03 13:56:06,362 DEBUG transport.py Запрос списка известных пользователей test1
+2022-05-03 13:56:06,366 DEBUG transport.py Passwd hash ready: b'6c95daf460f03d00239959faac8387d157dafbe382cd684426a295cd37fbcb0e4d874cae7b07017717c8acaff862f6241d4eaeea2366f6a7b5076a8c72035cd6'
+2022-05-03 13:56:06,366 DEBUG transport.py Presense message = {'action': 'presence', 'time': 1651575366.3668263, 'user': {'account_name': 'test2', 'pubkey': '-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAtrfkZ/5Xtj72x44QP9b5\neTenYYlSJkkb6X+jL4pqATUwGcvvcxBDtRrR0j1VZzhdlUvetoA3MvecULu3jTvg\nRhcrRHQRIzgMSjNV9ZGFBqhZvQmwGJEDI72dAjLyb1e5t1fT45o2DRfA+Zgxt+N0\ntTIgV7xIQiJrkGkaTje1oXqa9a1MH3o2bMLyrnfv2FE3SKdEQK5GUy+ec0P42QUx\njQ4GG2tEVYHJHS8tiQ+Rwz2Qcubs2YeqmLiUP6ZNdRLEZxn4YN0YNsTPEYzre2qo\n/nAAuWSixjOzt8OQQoSlOjL+VcDZBTitNSmnCMtjcVeTj36J5jUsc3onQofaWf1M\npQIDAQAB\n-----END PUBLIC KEY-----'}}
+2022-05-03 13:56:06,882 DEBUG transport.py Server response = {'response': 511, 'bin': 'f950e337e2a41f61f2573029ba26dfc85f5cd82767777ff43eefbd7d56c6bb6f9a2025ebd50cc991a49a3e32520ca7f4aba62ac889ee11ece9f3641f8c884aac'}.
+2022-05-03 13:56:06,883 DEBUG transport.py Разбор сообщения от сервера: {'response': 200}
+2022-05-03 13:56:06,883 DEBUG transport.py Запрос списка известных пользователей test2
+2022-05-03 13:56:06,898 DEBUG transport.py Запрос контакт листа для пользователся Thread-1
+2022-05-03 13:56:06,899 DEBUG transport.py Сформирован запрос {'action': 'get_contacts', 'time': 1651575366.8991373, 'user': 'test1'}
+2022-05-03 13:56:07,401 DEBUG transport.py Получен ответ {'response': 202, 'data_list': ['test2', 'Roman', 'Nadezhda']}
+2022-05-03 13:56:07,429 DEBUG transport.py Запрос контакт листа для пользователся Thread-1
+2022-05-03 13:56:07,430 DEBUG transport.py Сформирован запрос {'action': 'get_contacts', 'time': 1651575367.4301205, 'user': 'test2'}
+2022-05-03 13:56:07,438 DEBUG client.py Transport ready.
+2022-05-03 13:56:07,439 DEBUG transport.py Запущен процесс - приёмник сообщений с сервера.
+2022-05-03 13:56:07,909 DEBUG transport.py Получен ответ {'response': 202, 'data_list': ['test1', 'Roman', 'Nadezhda']}
+2022-05-03 13:56:07,948 DEBUG client.py Transport ready.
+2022-05-03 13:56:07,948 DEBUG transport.py Запущен процесс - приёмник сообщений с сервера.

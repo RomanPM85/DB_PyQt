@@ -43,7 +43,7 @@ class UserNameDialog(QDialog):
         self.show()
 
     def click(self):
-        '''Метод обрабтчик кнопки ОК.'''
+        '''Метод обработчик кнопки ОК.'''
         if self.client_name.text() and self.client_passwd.text():
             self.ok_pressed = True
             qApp.exit()

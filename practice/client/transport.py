@@ -231,7 +231,7 @@ class ClientTransport(threading.Thread, QObject):
             self.process_server_ans(get_message(self.transport))
 
     def remove_contact(self, contact):
-        '''Метод отправляющий на сервер сведения о удалении контакта.'''
+        '''Метод отправляющий на сервер сведения об удалении контакта.'''
         logger.debug(f'Удаление контакта {contact}')
         req = {
             ACTION: REMOVE_CONTACT,
@@ -277,7 +277,7 @@ class ClientTransport(threading.Thread, QObject):
 
     def run(self):
         '''Метод содержащий основной цикл работы транспортного потока.'''
-        logger.debug('Запущен процесс - приёмник собщений с сервера.')
+        logger.debug('Запущен процесс - приёмник сообщений с сервера.')
         while self.running:
             # Отдыхаем секунду и снова пробуем захватить сокет.
             # если не сделать тут задержку, то отправка может достаточно долго
