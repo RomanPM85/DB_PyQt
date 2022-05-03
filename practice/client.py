@@ -18,11 +18,10 @@ from client.start_dialog import UserNameDialog
 logger = logging.getLogger('client_dist')
 
 
-# Парсер аргументов коммандной строки
+# Парсер аргументов командной строки
 @log
 def arg_parser():
-    """
-    Парсер аргументов командной строки, возвращает кортеж из 4 элементов
+    """Парсер аргументов командной строки, возвращает кортеж из 4 элементов
     адрес сервера, порт, имя пользователя, пароль.
     Выполняет проверку на корректность номера порта.
     """
@@ -49,11 +48,11 @@ def arg_parser():
 
 # Основная функция клиента
 if __name__ == '__main__':
-    # Загружаем параметы коммандной строки
+    # Загружаем параметры командной строки
     server_address, server_port, client_name, client_passwd = arg_parser()
     logger.debug('Args loaded')
 
-    # Создаём клиентокое приложение
+    # Создаём клиентское приложение
     client_app = QApplication(sys.argv)
 
     # Если имя пользователя не было указано в командной строке, то запросим его
@@ -61,7 +60,7 @@ if __name__ == '__main__':
     if not client_name or not client_passwd:
         client_app.exec_()
         # Если пользователь ввёл имя и нажал ОК, то сохраняем ведённое и
-        # удаляем объект, инааче выходим
+        # удаляем объект, иначе выходим
         if start_dialog.ok_pressed:
             client_name = start_dialog.client_name.text()
             client_passwd = start_dialog.client_passwd.text()
