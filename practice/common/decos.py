@@ -1,14 +1,14 @@
+import logs.config_client_log
+import logs.config_server_log
 import socket
 import logging
 import sys
 sys.path.append('../')
-import logs.config_client_log
-import logs.config_server_log
 
 
 # метод определения модуля, источника запуска.
 if sys.argv[0].find('client_dist') == -1:
-    # если не клиент то сервер!
+    # если не клиент, то сервер!
     logger = logging.getLogger('server_dist')
 else:
     # иначе сервер
@@ -16,10 +16,9 @@ else:
 
 
 def log(func_to_log):
-    """
-    Декоратор, выполняющий логирование вызовов функций.
+    """Декоратор, выполняющий логирование вызовов функций.
     Сохраняет события типа debug, содержащие
-    информацию о имени вызываемой функиции, параметры с которыми
+    информацию об имени вызываемой функции, параметры с которыми
     вызывается функция, и модуль, вызывающий функцию.
     """
 
@@ -34,8 +33,7 @@ def log(func_to_log):
 
 
 def login_required(func):
-    """
-    Декоратор, проверяющий, что клиент авторизован на сервере.
+    """Декоратор, проверяющий, что клиент авторизован на сервере.
     Проверяет, что передаваемый объект сокета находится в
     списке авторизованных клиентов.
     За исключением передачи словаря-запроса
@@ -44,8 +42,12 @@ def login_required(func):
     """
 
     def checker(*args, **kwargs):
-        # проверяем, что первый аргумент - экземпляр MessageProcessor
-        # Импортить необходимо тут, иначе ошибка рекурсивного импорта.
+        """Проверяем, что первый аргумент - экземпляр MessageProcessor
+        Импорт необходим, иначе ошибка рекурсивного импорта.
+        :param args:
+        :param kwargs:
+        :return:
+        """
         from server.core import MessageProcessor
         from common.variables import ACTION, PRESENCE
         if isinstance(args[0], MessageProcessor):
@@ -64,7 +66,7 @@ def login_required(func):
                 if isinstance(arg, dict):
                     if ACTION in arg and arg[ACTION] == PRESENCE:
                         found = True
-            # Если не не авторизован и не сообщение начала авторизации, то
+            # Если не авторизован и нет сообщение начала авторизации, тогда
             # вызываем исключение.
             if not found:
                 raise TypeError
