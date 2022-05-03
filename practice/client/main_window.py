@@ -19,8 +19,7 @@ logger = logging.getLogger('client_dist')
 
 
 class ClientMainWindow(QMainWindow):
-    """
-    Класс - основное окно пользователя.
+    """Класс - основное окно пользователя.
     Содержит всю основную логику работы клиентского модуля.
     Конфигурация окна создана в QTDesigner и загружается из
     конвертированного файла main_window_conv.py
@@ -70,8 +69,7 @@ class ClientMainWindow(QMainWindow):
         self.show()
 
     def set_disabled_input(self):
-        """
-        Метод делающий поля ввода неактивными.
+        """Метод делающий поля ввода неактивными.
         :return:
         """
         # Надпись  - получатель.
@@ -90,8 +88,7 @@ class ClientMainWindow(QMainWindow):
         self.current_chat_key = None
 
     def history_list_update(self):
-        """
-        Метод заполняющий соответствующий QListView
+        """Метод заполняющий соответствующий QListView
         историей переписки с текущим собеседником.
         :return:
         """
@@ -133,8 +130,7 @@ class ClientMainWindow(QMainWindow):
         self.ui.list_messages.scrollToBottom()
 
     def select_active_user(self):
-        """
-        Метод обработчик события двойного клика по списку контактов.
+        """Метод обработчик события двойного клика по списку контактов.
         :return:
         """
         # Выбранный пользователем (даблклик) находится в выделенном элементе в
@@ -144,8 +140,8 @@ class ClientMainWindow(QMainWindow):
         self.set_active_user()
 
     def set_active_user(self):
-        """
-        Метод активации чата с собеседником.
+        """Метод активации чата с собеседником.
+        :return:
         """
         # Запрашиваем публичный ключ пользователя и создаём объект шифрования
         try:
@@ -160,10 +156,12 @@ class ClientMainWindow(QMainWindow):
             self.encryptor = None
             logger.debug(f'Не удалось получить ключ для {self.current_chat}')
 
-        # Если ключа нет то ошибка, что не удалось начать чат с пользователем
+        # Если ключа нет, то ошибка, что не удалось начать чат с пользователем
         if not self.current_chat_key:
-            self.messages.warning(
-                self, 'Ошибка', 'Для выбранного пользователя нет ключа шифрования.')
+            self.messages.warning(self,
+                                  'Ошибка',
+                                  'Для выбранного пользователя нет ключа шифрования.',
+                                  )
             return
 
         # Ставим надпись и активируем кнопки
@@ -177,8 +175,8 @@ class ClientMainWindow(QMainWindow):
         self.history_list_update()
 
     def clients_list_update(self):
-        """
-        Метод обновляющий список контактов.
+        """Метод обновляющий список контактов.
+        :return:
         """
         contacts_list = self.database.get_contacts()
         self.contacts_model = QStandardItemModel()
@@ -189,8 +187,8 @@ class ClientMainWindow(QMainWindow):
         self.ui.list_contacts.setModel(self.contacts_model)
 
     def add_contact_window(self):
-        """
-        Метод создающий окно - диалог добавления контакта.
+        """Метод создающий окно - диалог добавления контакта.
+        :return:
         """
         global select_dialog
         select_dialog = AddContactDialog(self.transport, self.database)
@@ -199,36 +197,48 @@ class ClientMainWindow(QMainWindow):
         select_dialog.show()
 
     def add_contact_action(self, item):
-        """
-        Метод обработчик нажатия кнопки 'Добавить'.
+        """Метод обработчик нажатия кнопки 'Добавить'.
+        :param item:
+        :return:
         """
         new_contact = item.selector.currentText()
         self.add_contact(new_contact)
         item.close()
 
     def add_contact(self, new_contact):
-        """
-        Метод добавляющий контакт в серверную и клиентскую BD.
+        """Метод добавляющий контакт в серверную и клиентскую BD.
         После обновления баз данных обновляет и содержимое окна.
+        :param new_contact:
+        :return:
         """
         try:
             self.transport.add_contact(new_contact)
         except ServerError as err:
-            self.messages.critical(self, 'Ошибка сервера', err.text)
+            self.messages.critical(self,
+                                   'Ошибка сервера',
+                                   err.text,
+                                   )
         except OSError as err:
             if err.errno:
-                self.messages.critical(
-                    self, 'Ошибка', 'Потеряно соединение с сервером!')
+                self.messages.critical(self,
+                                       'Ошибка',
+                                       'Потеряно соединение с сервером!',
+                                       )
                 self.close()
-            self.messages.critical(self, 'Ошибка', 'Таймаут соединения!')
+            self.messages.critical(self,
+                                   'Ошибка',
+                                   'Таймаут соединения!',
+                                   )
         else:
             self.database.add_contact(new_contact)
             new_contact = QStandardItem(new_contact)
             new_contact.setEditable(False)
             self.contacts_model.appendRow(new_contact)
             logger.info(f'Успешно добавлен контакт {new_contact}')
-            self.messages.information(
-                self, 'Успех', 'Контакт успешно добавлен.')
+            self.messages.information(self,
+                                      'Успех',
+                                      'Контакт успешно добавлен.',
+                                      )
 
     def delete_contact_window(self):
         """
@@ -251,18 +261,29 @@ class ClientMainWindow(QMainWindow):
         try:
             self.transport.remove_contact(selected)
         except ServerError as err:
-            self.messages.critical(self, 'Ошибка сервера', err.text)
+            self.messages.critical(self,
+                                   'Ошибка сервера',
+                                   err.text,
+                                   )
         except OSError as err:
             if err.errno:
-                self.messages.critical(
-                    self, 'Ошибка', 'Потеряно соединение с сервером!')
+                self.messages.critical(self,
+                                       'Ошибка',
+                                       'Потеряно соединение с сервером!',
+                                       )
                 self.close()
-            self.messages.critical(self, 'Ошибка', 'Таймаут соединения!')
+            self.messages.critical(self,
+                                   'Ошибка',
+                                   'Таймаут соединения!',
+                                   )
         else:
             self.database.del_contact(selected)
             self.clients_list_update()
             logger.info(f'Успешно удалён контакт {selected}')
-            self.messages.information(self, 'Успех', 'Контакт успешно удалён.')
+            self.messages.information(self,
+                                      'Успех',
+                                      'Контакт успешно удалён.',
+                                      )
             item.close()
             # Если удалён активный пользователь, то деактивируем поля ввода.
             if selected == self.current_chat:
@@ -292,16 +313,26 @@ class ClientMainWindow(QMainWindow):
                 message_text_encrypted_base64.decode('ascii'))
             pass
         except ServerError as err:
-            self.messages.critical(self, 'Ошибка', err.text)
+            self.messages.critical(self,
+                                   'Ошибка',
+                                   err.text,
+                                   )
         except OSError as err:
             if err.errno:
-                self.messages.critical(
-                    self, 'Ошибка', 'Потеряно соединение с сервером!')
+                self.messages.critical(self,
+                                       'Ошибка',
+                                       'Потеряно соединение с сервером!',
+                                       )
                 self.close()
-            self.messages.critical(self, 'Ошибка', 'Таймаут соединения!')
+            self.messages.critical(self,
+                                   'Ошибка',
+                                   'Таймаут соединения!',
+                                   )
         except (ConnectionResetError, ConnectionAbortedError):
-            self.messages.critical(
-                self, 'Ошибка', 'Потеряно соединение с сервером!')
+            self.messages.critical(self,
+                                   'Ошибка',
+                                   'Потеряно соединение с сервером!',
+                                   )
             self.close()
         else:
             self.database.save_message(self.current_chat, 'out', message_text)
@@ -325,8 +356,10 @@ class ClientMainWindow(QMainWindow):
         try:
             decrypted_message = self.decrypter.decrypt(encrypted_message)
         except (ValueError, TypeError):
-            self.messages.warning(
-                self, 'Ошибка', 'Не удалось декодировать сообщение.')
+            self.messages.warning(self,
+                                  'Ошибка',
+                                  'Не удалось декодировать сообщение.',
+                                  )
             return
         # Сохраняем сообщение в базу и обновляем историю сообщений или
         # открываем новый чат.
@@ -377,10 +410,10 @@ class ClientMainWindow(QMainWindow):
         Выдаёт окно предупреждение и завершает работу приложения.
         :return:
         """
-        self.messages.warning(
-            self,
-            'Сбой соединения',
-            'Потеряно соединение с сервером. ')
+        self.messages.warning(self,
+                              'Сбой соединения',
+                              'Потеряно соединение с сервером.',
+                              )
         self.close()
 
     @pyqtSlot()
@@ -391,10 +424,10 @@ class ClientMainWindow(QMainWindow):
         """
         if self.current_chat and not self.database.check_user(
                 self.current_chat):
-            self.messages.warning(
-                self,
-                'Сочувствую',
-                'К сожалению собеседник был удалён с сервера.')
+            self.messages.warning(self,
+                                  'Сочувствую',
+                                  'К сожалению собеседник был удалён с сервера.',
+                                  )
             self.set_disabled_input()
             self.current_chat = None
         self.clients_list_update()
