@@ -1891,3 +1891,245 @@ Hello Roman
 2022-05-03 21:10:40,357 DEBUG transport.py Разбор сообщения от сервера: {'response': 200}
 2022-05-03 21:10:40,357 INFO transport.py Отправлено сообщение для пользователя test1
 2022-05-03 21:10:40,365 DEBUG main_window.py Отправлено сообщение для test1: hi
+2022-05-03 21:18:01,115 DEBUG client.py Args loaded
+2022-05-03 21:18:01,329 INFO client.py Запущен клиент с параметрами: адрес сервера: 127.0.0.1 , порт: 7777, имя пользователя: test1
+2022-05-03 21:18:01,396 DEBUG client.py Keys successfully loaded.
+2022-05-03 21:18:01,422 INFO transport.py Попытка подключения №1
+2022-05-03 21:18:01,423 DEBUG transport.py Connection established.
+2022-05-03 21:18:01,423 DEBUG transport.py Starting auth dialog.
+2022-05-03 21:18:01,433 DEBUG transport.py Passwd hash ready: b'49b70501d4d72ff5522a79cf779df86656a057282ac9ab564efb80fcba4fbc484bedcf52b3fb233d9b7b91337becc542ec3256a0269deddfedbce7275f44a781'
+2022-05-03 21:18:01,434 DEBUG transport.py Presense message = {'action': 'presence', 'time': 1651601881.4342196, 'user': {'account_name': 'test1', 'pubkey': '-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAmKN/CFSxgU8eu0oO0oKw\n29WTZQSfqw/mJgEtr8nLUAOHGcg3kT7epUgPfwbo/V67sJlGhb/UD7dPK81utWRn\nFKhhUGuo+ad/4HnvbSQjIHy2Wbr85T4gJCL1IqTkodAgSOo4Nuv/Qq9r5po0dNIC\nF4YTZrzfCy6V0v349iXM2CXf+/14fHCxsm3OkNCUwHsOW6nzh5fIyAs1UhssJm/Z\nbCNzX5PkRjI7bwBJhoXHNgS1fDyII6vGrQAyAwxU0hKrBAtAzYIon5ZlIYxyF2/5\nKb8IVmLmnrvCpmtjTQ4u80Dp6YuErMCD82GzgUi50UdQoW617AmFxaKpvO7Lu+aA\nfwIDAQAB\n-----END PUBLIC KEY-----'}}
+2022-05-03 21:18:01,672 DEBUG client.py Args loaded
+2022-05-03 21:18:01,914 INFO client.py Запущен клиент с параметрами: адрес сервера: 127.0.0.1 , порт: 7777, имя пользователя: test2
+2022-05-03 21:18:01,930 DEBUG transport.py Server response = {'response': 511, 'bin': '3f97076650ac8d57fff87d02d283b92313d9008363a70f9dd313207100c4a2cd021dcf8f09690206ae0363388cb2cdbdb83b32462b4cb67c6b695d5be0dc5b70'}.
+2022-05-03 21:18:01,931 DEBUG transport.py Разбор сообщения от сервера: {'response': 200}
+2022-05-03 21:18:01,931 DEBUG transport.py Запрос списка известных пользователей test1
+2022-05-03 21:18:01,976 DEBUG client.py Keys successfully loaded.
+2022-05-03 21:18:01,997 INFO transport.py Попытка подключения №1
+2022-05-03 21:18:01,997 DEBUG transport.py Connection established.
+2022-05-03 21:18:01,997 DEBUG transport.py Starting auth dialog.
+2022-05-03 21:18:02,007 DEBUG transport.py Passwd hash ready: b'6c95daf460f03d00239959faac8387d157dafbe382cd684426a295cd37fbcb0e4d874cae7b07017717c8acaff862f6241d4eaeea2366f6a7b5076a8c72035cd6'
+2022-05-03 21:18:02,007 DEBUG transport.py Presense message = {'action': 'presence', 'time': 1651601882.0076985, 'user': {'account_name': 'test2', 'pubkey': '-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAtrfkZ/5Xtj72x44QP9b5\neTenYYlSJkkb6X+jL4pqATUwGcvvcxBDtRrR0j1VZzhdlUvetoA3MvecULu3jTvg\nRhcrRHQRIzgMSjNV9ZGFBqhZvQmwGJEDI72dAjLyb1e5t1fT45o2DRfA+Zgxt+N0\ntTIgV7xIQiJrkGkaTje1oXqa9a1MH3o2bMLyrnfv2FE3SKdEQK5GUy+ec0P42QUx\njQ4GG2tEVYHJHS8tiQ+Rwz2Qcubs2YeqmLiUP6ZNdRLEZxn4YN0YNsTPEYzre2qo\n/nAAuWSixjOzt8OQQoSlOjL+VcDZBTitNSmnCMtjcVeTj36J5jUsc3onQofaWf1M\npQIDAQAB\n-----END PUBLIC KEY-----'}}
+2022-05-03 21:18:02,014 DEBUG transport.py Запрос контакт листа для пользователя Thread-1
+2022-05-03 21:18:02,014 DEBUG transport.py Сформирован запрос {'action': 'get_contacts', 'time': 1651601882.0141816, 'user': 'test1'}
+2022-05-03 21:18:02,503 DEBUG transport.py Получен ответ {'response': 202, 'data_list': ['test2', 'Roman', 'Nadezhda']}
+2022-05-03 21:18:02,506 DEBUG transport.py Server response = {'response': 511, 'bin': '2b9d0af3e249a197a26c28c1df8a2a08d296169bb39fcebca7cfd9ca04632a009571e38929fdce6c6c30861997c9ee5ab3bd95ad7420e7275768e6c43167055d'}.
+2022-05-03 21:18:02,506 DEBUG transport.py Разбор сообщения от сервера: {'response': 200}
+2022-05-03 21:18:02,506 DEBUG transport.py Запрос списка известных пользователей test2
+2022-05-03 21:18:02,532 DEBUG client.py Transport ready.
+2022-05-03 21:18:02,532 DEBUG transport.py Запущен процесс - приёмник сообщений с сервера.
+2022-05-03 21:18:03,043 DEBUG transport.py Запрос контакт листа для пользователя Thread-1
+2022-05-03 21:18:03,043 DEBUG transport.py Сформирован запрос {'action': 'get_contacts', 'time': 1651601883.043492, 'user': 'test2'}
+2022-05-03 21:18:03,527 DEBUG transport.py Получен ответ {'response': 202, 'data_list': ['test1', 'Roman', 'Nadezhda']}
+2022-05-03 21:18:03,562 DEBUG client.py Transport ready.
+2022-05-03 21:18:03,562 DEBUG transport.py Запущен процесс - приёмник сообщений с сервера.
+2022-05-03 21:50:41,131 DEBUG client.py Args loaded
+2022-05-03 21:50:41,333 INFO client.py Запущен клиент с параметрами: адрес сервера: 127.0.0.1 , порт: 7777, имя пользователя: test1
+2022-05-03 21:50:41,417 DEBUG client.py Keys successfully loaded.
+2022-05-03 21:50:41,442 INFO transport.py Попытка подключения №1
+2022-05-03 21:50:41,442 DEBUG transport.py Connection established.
+2022-05-03 21:50:41,442 DEBUG transport.py Starting auth dialog.
+2022-05-03 21:50:41,452 DEBUG transport.py Passwd hash ready: b'49b70501d4d72ff5522a79cf779df86656a057282ac9ab564efb80fcba4fbc484bedcf52b3fb233d9b7b91337becc542ec3256a0269deddfedbce7275f44a781'
+2022-05-03 21:50:41,452 DEBUG transport.py Presense message = {'action': 'presence', 'time': 1651603841.4528177, 'user': {'account_name': 'test1', 'pubkey': '-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAmKN/CFSxgU8eu0oO0oKw\n29WTZQSfqw/mJgEtr8nLUAOHGcg3kT7epUgPfwbo/V67sJlGhb/UD7dPK81utWRn\nFKhhUGuo+ad/4HnvbSQjIHy2Wbr85T4gJCL1IqTkodAgSOo4Nuv/Qq9r5po0dNIC\nF4YTZrzfCy6V0v349iXM2CXf+/14fHCxsm3OkNCUwHsOW6nzh5fIyAs1UhssJm/Z\nbCNzX5PkRjI7bwBJhoXHNgS1fDyII6vGrQAyAwxU0hKrBAtAzYIon5ZlIYxyF2/5\nKb8IVmLmnrvCpmtjTQ4u80Dp6YuErMCD82GzgUi50UdQoW617AmFxaKpvO7Lu+aA\nfwIDAQAB\n-----END PUBLIC KEY-----'}}
+2022-05-03 21:50:41,660 DEBUG client.py Args loaded
+2022-05-03 21:50:41,901 INFO client.py Запущен клиент с параметрами: адрес сервера: 127.0.0.1 , порт: 7777, имя пользователя: test2
+2022-05-03 21:50:41,949 DEBUG transport.py Server response = {'response': 511, 'bin': '832c373ae06f2f585bdd5c212fba5d4c5071ec97a8951ee4263117ad5917784657fc1a5a3fc6895466f7e659249867e22f9fb99456450393443d3f6ea5b67dd2'}.
+2022-05-03 21:50:41,949 DEBUG transport.py Разбор сообщения от сервера: {'response': 200}
+2022-05-03 21:50:41,949 DEBUG transport.py Запрос списка известных пользователей test1
+2022-05-03 21:50:41,962 DEBUG client.py Keys successfully loaded.
+2022-05-03 21:50:41,981 INFO transport.py Попытка подключения №1
+2022-05-03 21:50:41,981 DEBUG transport.py Connection established.
+2022-05-03 21:50:41,981 DEBUG transport.py Starting auth dialog.
+2022-05-03 21:50:41,991 DEBUG transport.py Passwd hash ready: b'6c95daf460f03d00239959faac8387d157dafbe382cd684426a295cd37fbcb0e4d874cae7b07017717c8acaff862f6241d4eaeea2366f6a7b5076a8c72035cd6'
+2022-05-03 21:50:41,992 DEBUG transport.py Presense message = {'action': 'presence', 'time': 1651603841.9922493, 'user': {'account_name': 'test2', 'pubkey': '-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAtrfkZ/5Xtj72x44QP9b5\neTenYYlSJkkb6X+jL4pqATUwGcvvcxBDtRrR0j1VZzhdlUvetoA3MvecULu3jTvg\nRhcrRHQRIzgMSjNV9ZGFBqhZvQmwGJEDI72dAjLyb1e5t1fT45o2DRfA+Zgxt+N0\ntTIgV7xIQiJrkGkaTje1oXqa9a1MH3o2bMLyrnfv2FE3SKdEQK5GUy+ec0P42QUx\njQ4GG2tEVYHJHS8tiQ+Rwz2Qcubs2YeqmLiUP6ZNdRLEZxn4YN0YNsTPEYzre2qo\n/nAAuWSixjOzt8OQQoSlOjL+VcDZBTitNSmnCMtjcVeTj36J5jUsc3onQofaWf1M\npQIDAQAB\n-----END PUBLIC KEY-----'}}
+2022-05-03 21:50:41,997 DEBUG transport.py Запрос контакт листа для пользователя Thread-1
+2022-05-03 21:50:41,998 DEBUG transport.py Сформирован запрос {'action': 'get_contacts', 'time': 1651603841.9980457, 'user': 'test1'}
+2022-05-03 21:50:42,493 DEBUG transport.py Получен ответ {'response': 202, 'data_list': ['test2', 'Roman', 'Nadezhda']}
+2022-05-03 21:50:42,497 DEBUG transport.py Server response = {'response': 511, 'bin': '69c72961a43a6864d6e1a320a9c49c6d03525d5c1f12e0deeb0edaf6760c679ec767947be3ff0863e4019f7a4b945fe3c311b129fe427cbc873fa95c5e745b3b'}.
+2022-05-03 21:50:42,498 DEBUG transport.py Разбор сообщения от сервера: {'response': 200}
+2022-05-03 21:50:42,498 DEBUG transport.py Запрос списка известных пользователей test2
+2022-05-03 21:50:42,530 DEBUG client.py Transport ready.
+2022-05-03 21:50:42,531 DEBUG transport.py Запущен процесс - приёмник сообщений с сервера.
+2022-05-03 21:50:43,037 DEBUG transport.py Запрос контакт листа для пользователя Thread-1
+2022-05-03 21:50:43,037 DEBUG transport.py Сформирован запрос {'action': 'get_contacts', 'time': 1651603843.0376573, 'user': 'test2'}
+2022-05-03 21:50:43,520 DEBUG transport.py Получен ответ {'response': 202, 'data_list': ['test1', 'Roman', 'Nadezhda']}
+2022-05-03 21:50:43,556 DEBUG client.py Transport ready.
+2022-05-03 21:50:43,556 DEBUG transport.py Запущен процесс - приёмник сообщений с сервера.
+2022-05-03 21:50:55,162 DEBUG transport.py Запрос публичного ключа для Nadezhda
+2022-05-03 21:50:56,042 DEBUG main_window.py Загружен открытый ключ для Nadezhda
+2022-05-03 21:51:00,348 DEBUG transport.py Запрос публичного ключа для Roman
+2022-05-03 21:51:00,550 DEBUG main_window.py Загружен открытый ключ для Roman
+2022-05-03 21:51:04,714 DEBUG transport.py Запрос публичного ключа для Nadezhda
+2022-05-03 21:51:05,059 DEBUG main_window.py Загружен открытый ключ для Nadezhda
+2022-05-03 21:51:06,310 DEBUG transport.py Запрос публичного ключа для test1
+2022-05-03 21:51:06,564 DEBUG main_window.py Загружен открытый ключ для test1
+2022-05-03 21:51:12,902 DEBUG transport.py Запрос публичного ключа для test2
+2022-05-03 21:51:13,076 DEBUG main_window.py Загружен открытый ключ для test2
+2022-05-03 21:51:13,854 DEBUG transport.py Запрос публичного ключа для Roman
+2022-05-03 21:51:14,580 DEBUG main_window.py Загружен открытый ключ для Roman
+2022-05-03 21:51:15,904 DEBUG transport.py Запрос публичного ключа для Nadezhda
+2022-05-03 21:51:16,085 DEBUG main_window.py Загружен открытый ключ для Nadezhda
+2022-05-03 21:51:16,768 DEBUG transport.py Запрос публичного ключа для test2
+2022-05-03 21:51:17,090 DEBUG main_window.py Загружен открытый ключ для test2
+2022-05-03 21:51:31,178 DEBUG client.py Args loaded
+2022-05-03 21:51:41,269 DEBUG client.py Using USERNAME = Roman, PASSWD = 123456.
+2022-05-03 21:51:41,269 INFO client.py Запущен клиент с параметрами: адрес сервера: 127.0.0.1 , порт: 7777, имя пользователя: Roman
+2022-05-03 21:51:41,330 DEBUG client.py Keys successfully loaded.
+2022-05-03 21:51:41,354 INFO transport.py Попытка подключения №1
+2022-05-03 21:51:41,354 DEBUG transport.py Connection established.
+2022-05-03 21:51:41,354 DEBUG transport.py Starting auth dialog.
+2022-05-03 21:51:41,365 DEBUG transport.py Passwd hash ready: b'fbdb738dd0ab28a639062ec7ec751dde1c3d2ecaf7ab25b06f9326e3394869a59a3a1ab614899b3f545e828e6b692894367097c5e703c736031b2c052a377018'
+2022-05-03 21:51:41,366 DEBUG transport.py Presense message = {'action': 'presence', 'time': 1651603901.3669415, 'user': {'account_name': 'Roman', 'pubkey': '-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA2SOBkbIDWzBEGZr3qYDn\nBZ/2dl93+4CPrdMz6oInSbLE7yeFe5P0+kLrVe3j9H/Lx9MUwt+7yVQTI9pWSPa+\nVLST1Vfdi3CW69Wg88fwigisuLR6zWqMaJgS9ZIaOdTvv/XEjpdbliZsm6rRnhrI\ntsg9bmpHTVmNTxJRWMUGBEZELD5VtyPWhwFOzJO97jhjvCxiH5mL2FkraPjax5yg\ngLUWCS7byFvJT3kfV+m/2Sun4oQ5rpg7Mu/3STdNBRCr9FC4Lp5yetU0zEeL8yX8\n0OjxNuHZMptF20gE1w0ZY/Cs+ploh1fj+1zFpHLHvQcOV56p19h6sqD/6HiHpK+R\nMQIDAQAB\n-----END PUBLIC KEY-----'}}
+2022-05-03 21:51:41,861 DEBUG transport.py Server response = {'response': 511, 'bin': 'f1c023403375395662d8254bcf885237a817691101d48a6d0ca33ad51c5e3b7712938f1802eea7362821cf5b5997ef68ab761095b31bbe1d69c3e0bb3d5492f5'}.
+2022-05-03 21:51:41,862 DEBUG transport.py Разбор сообщения от сервера: {'response': 200}
+2022-05-03 21:51:41,862 DEBUG transport.py Запрос списка известных пользователей Roman
+2022-05-03 21:51:42,399 DEBUG transport.py Запрос контакт листа для пользователя Thread-1
+2022-05-03 21:51:42,400 DEBUG transport.py Сформирован запрос {'action': 'get_contacts', 'time': 1651603902.4000647, 'user': 'Roman'}
+2022-05-03 21:51:42,884 DEBUG transport.py Получен ответ {'response': 202, 'data_list': ['test2', 'test1']}
+2022-05-03 21:51:42,910 DEBUG client.py Transport ready.
+2022-05-03 21:51:42,910 DEBUG transport.py Запущен процесс - приёмник сообщений с сервера.
+2022-05-03 21:51:58,081 DEBUG transport.py Запрос публичного ключа для test1
+2022-05-03 21:51:58,405 DEBUG main_window.py Загружен открытый ключ для test1
+2022-05-03 21:52:06,947 DEBUG transport.py Сформирован словарь сообщения: {'action': 'message', 'from': 'Roman', 'to': 'test1', 'time': 1651603926.9478567, 'mess_text': 'KVBsyhMNPNmdTs/WKzT+ROCgKRm4uA33/xH7sLSKv+23Ht6FIS1RRe9xSVGc09r23d+ONu4DBq9bRWBZn/pNbpvogcddJfu1/VvF8oTHFJHuW5I8RHfHVFHGPFufP5B/eLdtteqs5zi2MZXAeh6NqDRR7xmF5kBQ5Gy0MxZsj4Z8zznl2zQKy/JpYkQqq0x156J5wUFKPwKE4SJKgFmZRTpMHoyaGo4TgFRAXTH5DRS+YUkI5FkAvNWZC2BP4ZXGZq5ipIQOUQC1vSJZx09r9Gxrme6y31guvjKK2MhokIlP0tvTD8jOHb0IX2dLcOgq+bNT0+br0qUvtAgU2P/zSg=='}
+2022-05-03 21:52:07,439 DEBUG transport.py Разбор сообщения от сервера: {'response': 200}
+2022-05-03 21:52:07,439 INFO transport.py Отправлено сообщение для пользователя test1
+2022-05-03 21:52:07,447 DEBUG main_window.py Отправлено сообщение для test1: Hello test1
+2022-05-03 21:52:07,649 DEBUG transport.py Принято сообщение с сервера: {'action': 'message', 'from': 'Roman', 'to': 'test1', 'time': 1651603926.9478567, 'mess_text': 'KVBsyhMNPNmdTs/WKzT+ROCgKRm4uA33/xH7sLSKv+23Ht6FIS1RRe9xSVGc09r23d+ONu4DBq9bRWBZn/pNbpvogcddJfu1/VvF8oTHFJHuW5I8RHfHVFHGPFufP5B/eLdtteqs5zi2MZXAeh6NqDRR7xmF5kBQ5Gy0MxZsj4Z8zznl2zQKy/JpYkQqq0x156J5wUFKPwKE4SJKgFmZRTpMHoyaGo4TgFRAXTH5DRS+YUkI5FkAvNWZC2BP4ZXGZq5ipIQOUQC1vSJZx09r9Gxrme6y31guvjKK2MhokIlP0tvTD8jOHb0IX2dLcOgq+bNT0+br0qUvtAgU2P/zSg=='}
+2022-05-03 21:52:07,650 DEBUG transport.py Разбор сообщения от сервера: {'action': 'message', 'from': 'Roman', 'to': 'test1', 'time': 1651603926.9478567, 'mess_text': 'KVBsyhMNPNmdTs/WKzT+ROCgKRm4uA33/xH7sLSKv+23Ht6FIS1RRe9xSVGc09r23d+ONu4DBq9bRWBZn/pNbpvogcddJfu1/VvF8oTHFJHuW5I8RHfHVFHGPFufP5B/eLdtteqs5zi2MZXAeh6NqDRR7xmF5kBQ5Gy0MxZsj4Z8zznl2zQKy/JpYkQqq0x156J5wUFKPwKE4SJKgFmZRTpMHoyaGo4TgFRAXTH5DRS+YUkI5FkAvNWZC2BP4ZXGZq5ipIQOUQC1vSJZx09r9Gxrme6y31guvjKK2MhokIlP0tvTD8jOHb0IX2dLcOgq+bNT0+br0qUvtAgU2P/zSg=='}
+2022-05-03 21:52:07,650 DEBUG transport.py Получено сообщение от пользователя Roman:KVBsyhMNPNmdTs/WKzT+ROCgKRm4uA33/xH7sLSKv+23Ht6FIS1RRe9xSVGc09r23d+ONu4DBq9bRWBZn/pNbpvogcddJfu1/VvF8oTHFJHuW5I8RHfHVFHGPFufP5B/eLdtteqs5zi2MZXAeh6NqDRR7xmF5kBQ5Gy0MxZsj4Z8zznl2zQKy/JpYkQqq0x156J5wUFKPwKE4SJKgFmZRTpMHoyaGo4TgFRAXTH5DRS+YUkI5FkAvNWZC2BP4ZXGZq5ipIQOUQC1vSJZx09r9Gxrme6y31guvjKK2MhokIlP0tvTD8jOHb0IX2dLcOgq+bNT0+br0qUvtAgU2P/zSg==
+2022-05-03 21:52:09,240 DEBUG transport.py Запрос публичного ключа для Roman
+2022-05-03 21:52:09,444 DEBUG main_window.py Загружен открытый ключ для Roman
+2022-05-03 21:52:21,197 DEBUG transport.py Запрос публичного ключа для Roman
+2022-05-03 21:52:21,462 DEBUG main_window.py Загружен открытый ключ для Roman
+2022-05-03 21:52:29,759 DEBUG transport.py Сформирован словарь сообщения: {'action': 'message', 'from': 'test1', 'to': 'Roman', 'time': 1651603949.7597466, 'mess_text': 'SEYK3UOgnAprRJd1A2qFzkXDt8KreJH8CjmF+IFqxd5wc0sUAKntrdH4XIMokQFiCwMX2T8Yl7XZEVBUPSXRbsOC91L7tABSLqV0jGd3UVXRJegwCvHw/QoQXnI5bhsZtaU/cTyUwVpgmv5tOENCM9P2ysR43qBHajLT3MQzDZcwZAAHb4S2LpFe0EVwKUa9umo7lqsG1q2RV93jOIC7utLhcj/5cn3Ieg2b16lFBMTahpHk7rv8AWY+Sf7qCuySuj1nh8G/qlSpVdVGUQvN86YCPuFSO0Dt83BLCFxp8i6W8n0bFoYzduAthF6jaN0sZJ+bThh9kJwVkEH0uw0BBA=='}
+2022-05-03 21:52:30,490 DEBUG transport.py Принято сообщение с сервера: {'action': 'message', 'from': 'test1', 'to': 'Roman', 'time': 1651603949.7597466, 'mess_text': 'SEYK3UOgnAprRJd1A2qFzkXDt8KreJH8CjmF+IFqxd5wc0sUAKntrdH4XIMokQFiCwMX2T8Yl7XZEVBUPSXRbsOC91L7tABSLqV0jGd3UVXRJegwCvHw/QoQXnI5bhsZtaU/cTyUwVpgmv5tOENCM9P2ysR43qBHajLT3MQzDZcwZAAHb4S2LpFe0EVwKUa9umo7lqsG1q2RV93jOIC7utLhcj/5cn3Ieg2b16lFBMTahpHk7rv8AWY+Sf7qCuySuj1nh8G/qlSpVdVGUQvN86YCPuFSO0Dt83BLCFxp8i6W8n0bFoYzduAthF6jaN0sZJ+bThh9kJwVkEH0uw0BBA=='}
+2022-05-03 21:52:30,490 DEBUG transport.py Разбор сообщения от сервера: {'action': 'message', 'from': 'test1', 'to': 'Roman', 'time': 1651603949.7597466, 'mess_text': 'SEYK3UOgnAprRJd1A2qFzkXDt8KreJH8CjmF+IFqxd5wc0sUAKntrdH4XIMokQFiCwMX2T8Yl7XZEVBUPSXRbsOC91L7tABSLqV0jGd3UVXRJegwCvHw/QoQXnI5bhsZtaU/cTyUwVpgmv5tOENCM9P2ysR43qBHajLT3MQzDZcwZAAHb4S2LpFe0EVwKUa9umo7lqsG1q2RV93jOIC7utLhcj/5cn3Ieg2b16lFBMTahpHk7rv8AWY+Sf7qCuySuj1nh8G/qlSpVdVGUQvN86YCPuFSO0Dt83BLCFxp8i6W8n0bFoYzduAthF6jaN0sZJ+bThh9kJwVkEH0uw0BBA=='}
+2022-05-03 21:52:30,490 DEBUG transport.py Получено сообщение от пользователя test1:SEYK3UOgnAprRJd1A2qFzkXDt8KreJH8CjmF+IFqxd5wc0sUAKntrdH4XIMokQFiCwMX2T8Yl7XZEVBUPSXRbsOC91L7tABSLqV0jGd3UVXRJegwCvHw/QoQXnI5bhsZtaU/cTyUwVpgmv5tOENCM9P2ysR43qBHajLT3MQzDZcwZAAHb4S2LpFe0EVwKUa9umo7lqsG1q2RV93jOIC7utLhcj/5cn3Ieg2b16lFBMTahpHk7rv8AWY+Sf7qCuySuj1nh8G/qlSpVdVGUQvN86YCPuFSO0Dt83BLCFxp8i6W8n0bFoYzduAthF6jaN0sZJ+bThh9kJwVkEH0uw0BBA==
+2022-05-03 21:52:30,490 DEBUG transport.py Разбор сообщения от сервера: {'response': 200}
+2022-05-03 21:52:30,490 INFO transport.py Отправлено сообщение для пользователя Roman
+2022-05-03 21:52:30,497 DEBUG main_window.py Отправлено сообщение для Roman: Hello Roman
+2022-05-03 21:52:54,898 DEBUG transport.py Сформирован словарь сообщения: {'action': 'message', 'from': 'Roman', 'to': 'test1', 'time': 1651603974.8980398, 'mess_text': 'FU6u14LOMEzNnKsZHOJgZoaRQjL4aXslJPVVasjBRwLxOZdfzsTgV6FxkHwY7vNrsZL8LPweJ6NIaUiVAbmRmhQ4UvyY0BpE/adAY5iIIqjI4SzvTbJIWlroEsGhl1iX6PYn/tcJL/Eqc8X2rAA27erek0Fc4ojIRuvL//E09kvhDdanR2sQRkNr151stUdFXy84DCl9X2Uu8xHy7k7wB8Vz2dfdkJhmdXPDufcHsBZGts9KhXoliCz66k/9y0hcF/CJPSQihEls5am4VU+tsgDiZeoFSXRAR3sEFNfNpdvp//CLX64qfm5tpcwxSMsHPWtSTHmJ6x8U+xX5EIB1eQ=='}
+2022-05-03 21:52:55,040 DEBUG transport.py Разбор сообщения от сервера: {'response': 200}
+2022-05-03 21:52:55,040 INFO transport.py Отправлено сообщение для пользователя test1
+2022-05-03 21:52:55,048 DEBUG main_window.py Отправлено сообщение для test1: Hi test!
+2022-05-03 21:52:55,221 DEBUG transport.py Принято сообщение с сервера: {'action': 'message', 'from': 'Roman', 'to': 'test1', 'time': 1651603974.8980398, 'mess_text': 'FU6u14LOMEzNnKsZHOJgZoaRQjL4aXslJPVVasjBRwLxOZdfzsTgV6FxkHwY7vNrsZL8LPweJ6NIaUiVAbmRmhQ4UvyY0BpE/adAY5iIIqjI4SzvTbJIWlroEsGhl1iX6PYn/tcJL/Eqc8X2rAA27erek0Fc4ojIRuvL//E09kvhDdanR2sQRkNr151stUdFXy84DCl9X2Uu8xHy7k7wB8Vz2dfdkJhmdXPDufcHsBZGts9KhXoliCz66k/9y0hcF/CJPSQihEls5am4VU+tsgDiZeoFSXRAR3sEFNfNpdvp//CLX64qfm5tpcwxSMsHPWtSTHmJ6x8U+xX5EIB1eQ=='}
+2022-05-03 21:52:55,221 DEBUG transport.py Разбор сообщения от сервера: {'action': 'message', 'from': 'Roman', 'to': 'test1', 'time': 1651603974.8980398, 'mess_text': 'FU6u14LOMEzNnKsZHOJgZoaRQjL4aXslJPVVasjBRwLxOZdfzsTgV6FxkHwY7vNrsZL8LPweJ6NIaUiVAbmRmhQ4UvyY0BpE/adAY5iIIqjI4SzvTbJIWlroEsGhl1iX6PYn/tcJL/Eqc8X2rAA27erek0Fc4ojIRuvL//E09kvhDdanR2sQRkNr151stUdFXy84DCl9X2Uu8xHy7k7wB8Vz2dfdkJhmdXPDufcHsBZGts9KhXoliCz66k/9y0hcF/CJPSQihEls5am4VU+tsgDiZeoFSXRAR3sEFNfNpdvp//CLX64qfm5tpcwxSMsHPWtSTHmJ6x8U+xX5EIB1eQ=='}
+2022-05-03 21:52:55,221 DEBUG transport.py Получено сообщение от пользователя Roman:FU6u14LOMEzNnKsZHOJgZoaRQjL4aXslJPVVasjBRwLxOZdfzsTgV6FxkHwY7vNrsZL8LPweJ6NIaUiVAbmRmhQ4UvyY0BpE/adAY5iIIqjI4SzvTbJIWlroEsGhl1iX6PYn/tcJL/Eqc8X2rAA27erek0Fc4ojIRuvL//E09kvhDdanR2sQRkNr151stUdFXy84DCl9X2Uu8xHy7k7wB8Vz2dfdkJhmdXPDufcHsBZGts9KhXoliCz66k/9y0hcF/CJPSQihEls5am4VU+tsgDiZeoFSXRAR3sEFNfNpdvp//CLX64qfm5tpcwxSMsHPWtSTHmJ6x8U+xX5EIB1eQ==
+2022-05-03 21:53:18,057 DEBUG transport.py Потеряно соединение с сервером.
+2022-05-03 21:53:19,445 DEBUG transport.py Транспорт завершает работу.
+2022-05-03 22:58:50,667 DEBUG client.py Args loaded
+2022-05-03 22:58:50,886 INFO client.py Запущен клиент с параметрами: адрес сервера: 127.0.0.1 , порт: 7777, имя пользователя: test1
+2022-05-03 22:58:50,958 DEBUG client.py Keys successfully loaded.
+2022-05-03 22:58:50,981 INFO transport.py Попытка подключения №1
+2022-05-03 22:58:50,982 DEBUG transport.py Connection established.
+2022-05-03 22:58:50,982 DEBUG transport.py Starting auth dialog.
+2022-05-03 22:58:50,991 DEBUG transport.py Passwd hash ready: b'49b70501d4d72ff5522a79cf779df86656a057282ac9ab564efb80fcba4fbc484bedcf52b3fb233d9b7b91337becc542ec3256a0269deddfedbce7275f44a781'
+2022-05-03 22:58:50,992 DEBUG transport.py Presense message = {'action': 'presence', 'time': 1651607930.99255, 'user': {'account_name': 'test1', 'pubkey': '-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAmKN/CFSxgU8eu0oO0oKw\n29WTZQSfqw/mJgEtr8nLUAOHGcg3kT7epUgPfwbo/V67sJlGhb/UD7dPK81utWRn\nFKhhUGuo+ad/4HnvbSQjIHy2Wbr85T4gJCL1IqTkodAgSOo4Nuv/Qq9r5po0dNIC\nF4YTZrzfCy6V0v349iXM2CXf+/14fHCxsm3OkNCUwHsOW6nzh5fIyAs1UhssJm/Z\nbCNzX5PkRjI7bwBJhoXHNgS1fDyII6vGrQAyAwxU0hKrBAtAzYIon5ZlIYxyF2/5\nKb8IVmLmnrvCpmtjTQ4u80Dp6YuErMCD82GzgUi50UdQoW617AmFxaKpvO7Lu+aA\nfwIDAQAB\n-----END PUBLIC KEY-----'}}
+2022-05-03 22:58:51,216 DEBUG client.py Args loaded
+2022-05-03 22:58:51,441 INFO client.py Запущен клиент с параметрами: адрес сервера: 127.0.0.1 , порт: 7777, имя пользователя: test2
+2022-05-03 22:58:51,488 DEBUG transport.py Server response = {'response': 511, 'bin': 'fa9b475d0fc898a6ce4de177e8263b67a03be3f716d24afbb2333ec15c90917284e0888755ff9a6dfc5c472db13a7ec4561bd70a40e323942319f8d9a26fea20'}.
+2022-05-03 22:58:51,488 DEBUG transport.py Разбор сообщения от сервера: {'response': 200}
+2022-05-03 22:58:51,488 DEBUG transport.py Запрос списка известных пользователей test1
+2022-05-03 22:58:51,516 DEBUG client.py Keys successfully loaded.
+2022-05-03 22:58:51,535 INFO transport.py Попытка подключения №1
+2022-05-03 22:58:51,535 DEBUG transport.py Connection established.
+2022-05-03 22:58:51,536 DEBUG transport.py Starting auth dialog.
+2022-05-03 22:58:51,545 DEBUG transport.py Passwd hash ready: b'6c95daf460f03d00239959faac8387d157dafbe382cd684426a295cd37fbcb0e4d874cae7b07017717c8acaff862f6241d4eaeea2366f6a7b5076a8c72035cd6'
+2022-05-03 22:58:51,545 DEBUG transport.py Presense message = {'action': 'presence', 'time': 1651607931.5456061, 'user': {'account_name': 'test2', 'pubkey': '-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAtrfkZ/5Xtj72x44QP9b5\neTenYYlSJkkb6X+jL4pqATUwGcvvcxBDtRrR0j1VZzhdlUvetoA3MvecULu3jTvg\nRhcrRHQRIzgMSjNV9ZGFBqhZvQmwGJEDI72dAjLyb1e5t1fT45o2DRfA+Zgxt+N0\ntTIgV7xIQiJrkGkaTje1oXqa9a1MH3o2bMLyrnfv2FE3SKdEQK5GUy+ec0P42QUx\njQ4GG2tEVYHJHS8tiQ+Rwz2Qcubs2YeqmLiUP6ZNdRLEZxn4YN0YNsTPEYzre2qo\n/nAAuWSixjOzt8OQQoSlOjL+VcDZBTitNSmnCMtjcVeTj36J5jUsc3onQofaWf1M\npQIDAQAB\n-----END PUBLIC KEY-----'}}
+2022-05-03 22:58:51,554 DEBUG transport.py Запрос контакт листа для пользователя Thread-1
+2022-05-03 22:58:51,554 DEBUG transport.py Сформирован запрос {'action': 'get_contacts', 'time': 1651607931.554297, 'user': 'test1'}
+2022-05-03 22:58:52,044 DEBUG transport.py Получен ответ {'response': 202, 'data_list': ['test2', 'Roman', 'Nadezhda']}
+2022-05-03 22:58:52,046 DEBUG transport.py Server response = {'response': 511, 'bin': 'c2bfa97c56812040a6c854227e69cff14c05508392cbe67c4c58cde84cf1d1a46615c3ad9f868e3a4c007da96d9a1098150a27224a5f4c482b046142fd4743f6'}.
+2022-05-03 22:58:52,046 DEBUG transport.py Разбор сообщения от сервера: {'response': 200}
+2022-05-03 22:58:52,046 DEBUG transport.py Запрос списка известных пользователей test2
+2022-05-03 22:58:52,072 DEBUG client.py Transport ready.
+2022-05-03 22:58:52,072 DEBUG transport.py Запущен процесс - приёмник сообщений с сервера.
+2022-05-03 22:58:52,584 DEBUG transport.py Запрос контакт листа для пользователя Thread-1
+2022-05-03 22:58:52,584 DEBUG transport.py Сформирован запрос {'action': 'get_contacts', 'time': 1651607932.5842183, 'user': 'test2'}
+2022-05-03 22:58:53,068 DEBUG transport.py Получен ответ {'response': 202, 'data_list': ['test1', 'Roman', 'Nadezhda']}
+2022-05-03 22:58:53,101 DEBUG client.py Transport ready.
+2022-05-03 22:58:53,102 DEBUG transport.py Запущен процесс - приёмник сообщений с сервера.
+2022-05-03 23:13:54,997 DEBUG client.py Args loaded
+2022-05-03 23:13:55,234 INFO client.py Запущен клиент с параметрами: адрес сервера: 127.0.0.1 , порт: 7777, имя пользователя: test1
+2022-05-03 23:13:55,344 DEBUG client.py Keys successfully loaded.
+2022-05-03 23:13:55,376 INFO transport.py Попытка подключения №1
+2022-05-03 23:13:55,376 DEBUG transport.py Connection established.
+2022-05-03 23:13:55,376 DEBUG transport.py Starting auth dialog.
+2022-05-03 23:13:55,397 DEBUG transport.py Passwd hash ready: b'49b70501d4d72ff5522a79cf779df86656a057282ac9ab564efb80fcba4fbc484bedcf52b3fb233d9b7b91337becc542ec3256a0269deddfedbce7275f44a781'
+2022-05-03 23:13:55,399 DEBUG transport.py Presense message = {'action': 'presence', 'time': 1651608835.3989527, 'user': {'account_name': 'test1', 'pubkey': '-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAmKN/CFSxgU8eu0oO0oKw\n29WTZQSfqw/mJgEtr8nLUAOHGcg3kT7epUgPfwbo/V67sJlGhb/UD7dPK81utWRn\nFKhhUGuo+ad/4HnvbSQjIHy2Wbr85T4gJCL1IqTkodAgSOo4Nuv/Qq9r5po0dNIC\nF4YTZrzfCy6V0v349iXM2CXf+/14fHCxsm3OkNCUwHsOW6nzh5fIyAs1UhssJm/Z\nbCNzX5PkRjI7bwBJhoXHNgS1fDyII6vGrQAyAwxU0hKrBAtAzYIon5ZlIYxyF2/5\nKb8IVmLmnrvCpmtjTQ4u80Dp6YuErMCD82GzgUi50UdQoW617AmFxaKpvO7Lu+aA\nfwIDAQAB\n-----END PUBLIC KEY-----'}}
+2022-05-03 23:13:55,709 DEBUG client.py Args loaded
+2022-05-03 23:13:55,886 DEBUG transport.py Server response = {'response': 511, 'bin': '0de0f91da92ace4f4db307925e4488a234bc9a1709128b1f92caeb2f445e5bd70d02464a424818831667d71e60a710eff186e3d5349f60b08a67af9e3067f227'}.
+2022-05-03 23:13:55,887 DEBUG transport.py Разбор сообщения от сервера: {'response': 200}
+2022-05-03 23:13:55,887 DEBUG transport.py Запрос списка известных пользователей test1
+2022-05-03 23:13:55,923 INFO client.py Запущен клиент с параметрами: адрес сервера: 127.0.0.1 , порт: 7777, имя пользователя: test2
+2022-05-03 23:13:55,990 DEBUG client.py Keys successfully loaded.
+2022-05-03 23:13:56,016 INFO transport.py Попытка подключения №1
+2022-05-03 23:13:56,016 DEBUG transport.py Connection established.
+2022-05-03 23:13:56,016 DEBUG transport.py Starting auth dialog.
+2022-05-03 23:13:56,031 DEBUG transport.py Passwd hash ready: b'6c95daf460f03d00239959faac8387d157dafbe382cd684426a295cd37fbcb0e4d874cae7b07017717c8acaff862f6241d4eaeea2366f6a7b5076a8c72035cd6'
+2022-05-03 23:13:56,032 DEBUG transport.py Запрос контакт листа для пользователя Thread-1
+2022-05-03 23:13:56,032 DEBUG transport.py Presense message = {'action': 'presence', 'time': 1651608836.0324392, 'user': {'account_name': 'test2', 'pubkey': '-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAtrfkZ/5Xtj72x44QP9b5\neTenYYlSJkkb6X+jL4pqATUwGcvvcxBDtRrR0j1VZzhdlUvetoA3MvecULu3jTvg\nRhcrRHQRIzgMSjNV9ZGFBqhZvQmwGJEDI72dAjLyb1e5t1fT45o2DRfA+Zgxt+N0\ntTIgV7xIQiJrkGkaTje1oXqa9a1MH3o2bMLyrnfv2FE3SKdEQK5GUy+ec0P42QUx\njQ4GG2tEVYHJHS8tiQ+Rwz2Qcubs2YeqmLiUP6ZNdRLEZxn4YN0YNsTPEYzre2qo\n/nAAuWSixjOzt8OQQoSlOjL+VcDZBTitNSmnCMtjcVeTj36J5jUsc3onQofaWf1M\npQIDAQAB\n-----END PUBLIC KEY-----'}}
+2022-05-03 23:13:56,032 DEBUG transport.py Сформирован запрос {'action': 'get_contacts', 'time': 1651608836.032502, 'user': 'test1'}
+2022-05-03 23:13:56,528 DEBUG transport.py Получен ответ {'response': 202, 'data_list': ['test2', 'Roman', 'Nadezhda']}
+2022-05-03 23:13:56,532 DEBUG transport.py Server response = {'response': 511, 'bin': 'a3a53e1739dc0e292d6860d443e9e4a1968a3f88be8ffdad7f43cfff8db7cc67bcb00a7fac95bcd53f216f10bf1a246c94c2b0b1d349d2341ecb6538bf15252c'}.
+2022-05-03 23:13:56,533 DEBUG transport.py Разбор сообщения от сервера: {'response': 200}
+2022-05-03 23:13:56,533 DEBUG transport.py Запрос списка известных пользователей test2
+2022-05-03 23:13:56,568 DEBUG client.py Transport ready.
+2022-05-03 23:13:56,569 DEBUG transport.py Запущен процесс - приёмник сообщений с сервера.
+2022-05-03 23:13:57,076 DEBUG transport.py Запрос контакт листа для пользователя Thread-1
+2022-05-03 23:13:57,076 DEBUG transport.py Сформирован запрос {'action': 'get_contacts', 'time': 1651608837.0762415, 'user': 'test2'}
+2022-05-03 23:13:57,557 DEBUG transport.py Получен ответ {'response': 202, 'data_list': ['test1', 'Roman', 'Nadezhda']}
+2022-05-03 23:13:57,596 DEBUG client.py Transport ready.
+2022-05-03 23:13:57,596 DEBUG transport.py Запущен процесс - приёмник сообщений с сервера.
+2022-05-03 23:14:08,516 DEBUG transport.py Запрос публичного ключа для test2
+2022-05-03 23:14:09,076 DEBUG main_window.py Загружен открытый ключ для test2
+2022-05-03 23:14:23,215 DEBUG transport.py Сформирован словарь сообщения: {'action': 'message', 'from': 'test1', 'to': 'test2', 'time': 1651608863.2149367, 'mess_text': 'hGsxt3FwHNlOBt55I2Nmrn7hA9GWOXJjuQnmuvHsMo6uGX15pTu7h0i/gTCZjlF2PFhOq+UgCfhtW1G5i9zySae2AXv7jf5BKEKu1thqA/RW8WNArUDEeYs7agFO7KzdEcsVk7TkNN8FIw5kKLlSkybnkUuHaTKbSGtVtHXAxm0HDlDLYsJ788OPl67x/ujJdzBFXo50bw5trET5LROLKlSrZ3TMkRc2ujn7n4n2pSuTNMtjDBHdwD95ddyE96VxxeE7suNG+70ly79EM6YO/tBotV8oD0NQUgTsNN9cMxRL6k3FbVuTloMgmAAFN7SJMVEjAIu0h5inhitsPpfUKQ=='}
+2022-05-03 23:14:24,117 DEBUG transport.py Разбор сообщения от сервера: {'response': 200}
+2022-05-03 23:14:24,117 INFO transport.py Отправлено сообщение для пользователя test2
+2022-05-03 23:14:24,126 DEBUG main_window.py Отправлено сообщение для test2: Hi test2
+2022-05-03 23:14:24,135 DEBUG transport.py Принято сообщение с сервера: {'action': 'message', 'from': 'test1', 'to': 'test2', 'time': 1651608863.2149367, 'mess_text': 'hGsxt3FwHNlOBt55I2Nmrn7hA9GWOXJjuQnmuvHsMo6uGX15pTu7h0i/gTCZjlF2PFhOq+UgCfhtW1G5i9zySae2AXv7jf5BKEKu1thqA/RW8WNArUDEeYs7agFO7KzdEcsVk7TkNN8FIw5kKLlSkybnkUuHaTKbSGtVtHXAxm0HDlDLYsJ788OPl67x/ujJdzBFXo50bw5trET5LROLKlSrZ3TMkRc2ujn7n4n2pSuTNMtjDBHdwD95ddyE96VxxeE7suNG+70ly79EM6YO/tBotV8oD0NQUgTsNN9cMxRL6k3FbVuTloMgmAAFN7SJMVEjAIu0h5inhitsPpfUKQ=='}
+2022-05-03 23:14:24,135 DEBUG transport.py Разбор сообщения от сервера: {'action': 'message', 'from': 'test1', 'to': 'test2', 'time': 1651608863.2149367, 'mess_text': 'hGsxt3FwHNlOBt55I2Nmrn7hA9GWOXJjuQnmuvHsMo6uGX15pTu7h0i/gTCZjlF2PFhOq+UgCfhtW1G5i9zySae2AXv7jf5BKEKu1thqA/RW8WNArUDEeYs7agFO7KzdEcsVk7TkNN8FIw5kKLlSkybnkUuHaTKbSGtVtHXAxm0HDlDLYsJ788OPl67x/ujJdzBFXo50bw5trET5LROLKlSrZ3TMkRc2ujn7n4n2pSuTNMtjDBHdwD95ddyE96VxxeE7suNG+70ly79EM6YO/tBotV8oD0NQUgTsNN9cMxRL6k3FbVuTloMgmAAFN7SJMVEjAIu0h5inhitsPpfUKQ=='}
+2022-05-03 23:14:24,135 DEBUG transport.py Получено сообщение от пользователя test1:hGsxt3FwHNlOBt55I2Nmrn7hA9GWOXJjuQnmuvHsMo6uGX15pTu7h0i/gTCZjlF2PFhOq+UgCfhtW1G5i9zySae2AXv7jf5BKEKu1thqA/RW8WNArUDEeYs7agFO7KzdEcsVk7TkNN8FIw5kKLlSkybnkUuHaTKbSGtVtHXAxm0HDlDLYsJ788OPl67x/ujJdzBFXo50bw5trET5LROLKlSrZ3TMkRc2ujn7n4n2pSuTNMtjDBHdwD95ddyE96VxxeE7suNG+70ly79EM6YO/tBotV8oD0NQUgTsNN9cMxRL6k3FbVuTloMgmAAFN7SJMVEjAIu0h5inhitsPpfUKQ==
+2022-05-03 23:14:30,221 DEBUG transport.py Запрос публичного ключа для test1
+2022-05-03 23:14:30,628 DEBUG main_window.py Загружен открытый ключ для test1
+2022-05-03 23:15:11,777 DEBUG transport.py Сформирован словарь сообщения: {'action': 'message', 'from': 'test2', 'to': 'test1', 'time': 1651608911.7775214, 'mess_text': 'gZ48qEUdfnQnP5NPlgme2YDMKNQ0yGcMKZpq1xc1G2TovHOu4glCoUMGs/+MiMgU+WLnnnE8wOI3yQl4iviv+VuWn89pxM/Y4XN2phfkkoWGsJkSc5y60gLWFuR2QVOwL2UhDyMKl0nKBDIi0UrBkz+D9e4tUHIol6erfFzFBw4cLkjbTLQlXcCdUwOcN/53uYPJJtdAcophmuvhhiFsXQ4dafIi3WqvCXU/0i+RBrWBLQRtz3s9Lyr4i9YYVv8kf5D+1PrRa5uH8Q3w8Om6J3LO4YaSiF1GWuQxLXPxG2N3TeF1rwJ670Q8wx6RmY/r1DDfpGe1u0Mn8/dO1yk8Kw=='}
+2022-05-03 23:15:12,699 DEBUG transport.py Принято сообщение с сервера: {'action': 'message', 'from': 'test2', 'to': 'test1', 'time': 1651608911.7775214, 'mess_text': 'gZ48qEUdfnQnP5NPlgme2YDMKNQ0yGcMKZpq1xc1G2TovHOu4glCoUMGs/+MiMgU+WLnnnE8wOI3yQl4iviv+VuWn89pxM/Y4XN2phfkkoWGsJkSc5y60gLWFuR2QVOwL2UhDyMKl0nKBDIi0UrBkz+D9e4tUHIol6erfFzFBw4cLkjbTLQlXcCdUwOcN/53uYPJJtdAcophmuvhhiFsXQ4dafIi3WqvCXU/0i+RBrWBLQRtz3s9Lyr4i9YYVv8kf5D+1PrRa5uH8Q3w8Om6J3LO4YaSiF1GWuQxLXPxG2N3TeF1rwJ670Q8wx6RmY/r1DDfpGe1u0Mn8/dO1yk8Kw=='}
+2022-05-03 23:15:12,700 DEBUG transport.py Разбор сообщения от сервера: {'action': 'message', 'from': 'test2', 'to': 'test1', 'time': 1651608911.7775214, 'mess_text': 'gZ48qEUdfnQnP5NPlgme2YDMKNQ0yGcMKZpq1xc1G2TovHOu4glCoUMGs/+MiMgU+WLnnnE8wOI3yQl4iviv+VuWn89pxM/Y4XN2phfkkoWGsJkSc5y60gLWFuR2QVOwL2UhDyMKl0nKBDIi0UrBkz+D9e4tUHIol6erfFzFBw4cLkjbTLQlXcCdUwOcN/53uYPJJtdAcophmuvhhiFsXQ4dafIi3WqvCXU/0i+RBrWBLQRtz3s9Lyr4i9YYVv8kf5D+1PrRa5uH8Q3w8Om6J3LO4YaSiF1GWuQxLXPxG2N3TeF1rwJ670Q8wx6RmY/r1DDfpGe1u0Mn8/dO1yk8Kw=='}
+2022-05-03 23:15:12,700 DEBUG transport.py Получено сообщение от пользователя test2:gZ48qEUdfnQnP5NPlgme2YDMKNQ0yGcMKZpq1xc1G2TovHOu4glCoUMGs/+MiMgU+WLnnnE8wOI3yQl4iviv+VuWn89pxM/Y4XN2phfkkoWGsJkSc5y60gLWFuR2QVOwL2UhDyMKl0nKBDIi0UrBkz+D9e4tUHIol6erfFzFBw4cLkjbTLQlXcCdUwOcN/53uYPJJtdAcophmuvhhiFsXQ4dafIi3WqvCXU/0i+RBrWBLQRtz3s9Lyr4i9YYVv8kf5D+1PrRa5uH8Q3w8Om6J3LO4YaSiF1GWuQxLXPxG2N3TeF1rwJ670Q8wx6RmY/r1DDfpGe1u0Mn8/dO1yk8Kw==
+2022-05-03 23:15:12,700 DEBUG transport.py Разбор сообщения от сервера: {'response': 200}
+2022-05-03 23:15:12,700 INFO transport.py Отправлено сообщение для пользователя test1
+2022-05-03 23:15:12,708 DEBUG main_window.py Отправлено сообщение для test1: hi test1
+2022-05-03 23:15:32,502 DEBUG transport.py Сформирован словарь сообщения: {'action': 'message', 'from': 'test1', 'to': 'test2', 'time': 1651608932.5021014, 'mess_text': 'WLYrlhHkp5vQg7f5jjIR3QMfgXTtYumJ/9pQ8tRsLyu70eVGmhnmZIE4aDn4cYww6Tp24omHJW7xW9aNzGy7vbH1FYGKpkjpQnPzHo8O6PWiFwBQ5V6PLnof4QxGLss3Mp1aAGIxSQZeopjGFnHgwgKqshgMsHghIJh+njDAdg3S90HRUotR1A6y/quHQeZA3KTMi0u0RvMM78WVKvSzjwqKGkD+e5LDOPor8nxA9XdIk5aEOBuYGFJTxlzbFhfCYXyWJzZytNG1mT8/XNGJ1YWuyAG5bqMcI0poKTh05qVQNUhi9OUq17NuCN42CiZfbPp3AnOevilvAX7PXxx6ag=='}
+2022-05-03 23:15:32,744 DEBUG transport.py Принято сообщение с сервера: {'action': 'message', 'from': 'test1', 'to': 'test2', 'time': 1651608932.5021014, 'mess_text': 'WLYrlhHkp5vQg7f5jjIR3QMfgXTtYumJ/9pQ8tRsLyu70eVGmhnmZIE4aDn4cYww6Tp24omHJW7xW9aNzGy7vbH1FYGKpkjpQnPzHo8O6PWiFwBQ5V6PLnof4QxGLss3Mp1aAGIxSQZeopjGFnHgwgKqshgMsHghIJh+njDAdg3S90HRUotR1A6y/quHQeZA3KTMi0u0RvMM78WVKvSzjwqKGkD+e5LDOPor8nxA9XdIk5aEOBuYGFJTxlzbFhfCYXyWJzZytNG1mT8/XNGJ1YWuyAG5bqMcI0poKTh05qVQNUhi9OUq17NuCN42CiZfbPp3AnOevilvAX7PXxx6ag=='}
+2022-05-03 23:15:32,744 DEBUG transport.py Разбор сообщения от сервера: {'action': 'message', 'from': 'test1', 'to': 'test2', 'time': 1651608932.5021014, 'mess_text': 'WLYrlhHkp5vQg7f5jjIR3QMfgXTtYumJ/9pQ8tRsLyu70eVGmhnmZIE4aDn4cYww6Tp24omHJW7xW9aNzGy7vbH1FYGKpkjpQnPzHo8O6PWiFwBQ5V6PLnof4QxGLss3Mp1aAGIxSQZeopjGFnHgwgKqshgMsHghIJh+njDAdg3S90HRUotR1A6y/quHQeZA3KTMi0u0RvMM78WVKvSzjwqKGkD+e5LDOPor8nxA9XdIk5aEOBuYGFJTxlzbFhfCYXyWJzZytNG1mT8/XNGJ1YWuyAG5bqMcI0poKTh05qVQNUhi9OUq17NuCN42CiZfbPp3AnOevilvAX7PXxx6ag=='}
+2022-05-03 23:15:32,744 DEBUG transport.py Получено сообщение от пользователя test1:WLYrlhHkp5vQg7f5jjIR3QMfgXTtYumJ/9pQ8tRsLyu70eVGmhnmZIE4aDn4cYww6Tp24omHJW7xW9aNzGy7vbH1FYGKpkjpQnPzHo8O6PWiFwBQ5V6PLnof4QxGLss3Mp1aAGIxSQZeopjGFnHgwgKqshgMsHghIJh+njDAdg3S90HRUotR1A6y/quHQeZA3KTMi0u0RvMM78WVKvSzjwqKGkD+e5LDOPor8nxA9XdIk5aEOBuYGFJTxlzbFhfCYXyWJzZytNG1mT8/XNGJ1YWuyAG5bqMcI0poKTh05qVQNUhi9OUq17NuCN42CiZfbPp3AnOevilvAX7PXxx6ag==
+2022-05-03 23:15:32,744 DEBUG transport.py Разбор сообщения от сервера: {'response': 200}
+2022-05-03 23:15:32,744 INFO transport.py Отправлено сообщение для пользователя test2
+2022-05-03 23:15:32,752 DEBUG main_window.py Отправлено сообщение для test2: he 2
+2022-05-03 23:15:42,510 DEBUG transport.py Сформирован словарь сообщения: {'action': 'message', 'from': 'test2', 'to': 'test1', 'time': 1651608942.5101447, 'mess_text': 'RWrNJVrYrm1PrsmItLjLqCkcWgtN/qpomiM7fAWbEQcOS6IxuTbpMI99rv1H8CE9nD1A8uXW+pIORpqHvOSuZ5VqHGeXqePEF6lPTosel28/fiAhjazGXtRG5Z/GtbCNYMkfd967xCmJkZKQ4z5udQYRAXPLBYi6b0GT/eYu/7Kho8HkWPN932UyZV1hnUxCNBv3H3TNlXLsFcAN8gM5trBKKaj8t4A2DgT+wGaJYHPYkKeP+VlACXgAD37LWFBXmha7uMuk8Rx9DbYwU/2BtvEcFInnI4jzouOXD7/FE1R2tzNC9ozrMTrlhypGmDudkvzmCMOESeMgCtyPyvnDww=='}
+2022-05-03 23:15:42,775 DEBUG transport.py Разбор сообщения от сервера: {'response': 200}
+2022-05-03 23:15:42,775 INFO transport.py Отправлено сообщение для пользователя test1
+2022-05-03 23:15:42,783 DEBUG main_window.py Отправлено сообщение для test1: he1
+2022-05-03 23:15:43,745 DEBUG transport.py Принято сообщение с сервера: {'action': 'message', 'from': 'test2', 'to': 'test1', 'time': 1651608942.5101447, 'mess_text': 'RWrNJVrYrm1PrsmItLjLqCkcWgtN/qpomiM7fAWbEQcOS6IxuTbpMI99rv1H8CE9nD1A8uXW+pIORpqHvOSuZ5VqHGeXqePEF6lPTosel28/fiAhjazGXtRG5Z/GtbCNYMkfd967xCmJkZKQ4z5udQYRAXPLBYi6b0GT/eYu/7Kho8HkWPN932UyZV1hnUxCNBv3H3TNlXLsFcAN8gM5trBKKaj8t4A2DgT+wGaJYHPYkKeP+VlACXgAD37LWFBXmha7uMuk8Rx9DbYwU/2BtvEcFInnI4jzouOXD7/FE1R2tzNC9ozrMTrlhypGmDudkvzmCMOESeMgCtyPyvnDww=='}
+2022-05-03 23:15:43,745 DEBUG transport.py Разбор сообщения от сервера: {'action': 'message', 'from': 'test2', 'to': 'test1', 'time': 1651608942.5101447, 'mess_text': 'RWrNJVrYrm1PrsmItLjLqCkcWgtN/qpomiM7fAWbEQcOS6IxuTbpMI99rv1H8CE9nD1A8uXW+pIORpqHvOSuZ5VqHGeXqePEF6lPTosel28/fiAhjazGXtRG5Z/GtbCNYMkfd967xCmJkZKQ4z5udQYRAXPLBYi6b0GT/eYu/7Kho8HkWPN932UyZV1hnUxCNBv3H3TNlXLsFcAN8gM5trBKKaj8t4A2DgT+wGaJYHPYkKeP+VlACXgAD37LWFBXmha7uMuk8Rx9DbYwU/2BtvEcFInnI4jzouOXD7/FE1R2tzNC9ozrMTrlhypGmDudkvzmCMOESeMgCtyPyvnDww=='}
+2022-05-03 23:15:43,745 DEBUG transport.py Получено сообщение от пользователя test2:RWrNJVrYrm1PrsmItLjLqCkcWgtN/qpomiM7fAWbEQcOS6IxuTbpMI99rv1H8CE9nD1A8uXW+pIORpqHvOSuZ5VqHGeXqePEF6lPTosel28/fiAhjazGXtRG5Z/GtbCNYMkfd967xCmJkZKQ4z5udQYRAXPLBYi6b0GT/eYu/7Kho8HkWPN932UyZV1hnUxCNBv3H3TNlXLsFcAN8gM5trBKKaj8t4A2DgT+wGaJYHPYkKeP+VlACXgAD37LWFBXmha7uMuk8Rx9DbYwU/2BtvEcFInnI4jzouOXD7/FE1R2tzNC9ozrMTrlhypGmDudkvzmCMOESeMgCtyPyvnDww==
+2022-05-03 23:16:01,712 DEBUG transport.py Сформирован словарь сообщения: {'action': 'message', 'from': 'test1', 'to': 'test2', 'time': 1651608961.7121093, 'mess_text': 'fDDClDfM5SDGmQ5eDxW2JdpodXYqBjBH4COKgVspyA2tsgr5DLROgdMgBO7juWplZglc56h8u3124U2Ogf/L8kBZLEIaan2uxPmQ3dyrP29BXf+OEgU+MaAOWop3yEBtxvb366pN/7/dJgPf8GiRsLUtY4hepfAOBcvOM99IKhWfpHE1pb0+iBH0ZuhJURMEm8c+VbqEx9+7iJyUcVuJ7+sJIoyTgK6bj9hfPeE3DtIYMUE6fohOMP2rPBGfAnJ1J4hEJm3bcdpiAyZr3SMSzmran2qV6tXlRQmN80VDj6hpi8lO+51vRHyEHc4z6XXm6QCU2o/jrCltCSjVz89EEg=='}
+2022-05-03 23:16:01,819 DEBUG transport.py Разбор сообщения от сервера: {'response': 200}
+2022-05-03 23:16:01,819 INFO transport.py Отправлено сообщение для пользователя test2
+2022-05-03 23:16:01,827 DEBUG main_window.py Отправлено сообщение для test2: test2
+2022-05-03 23:16:02,306 DEBUG transport.py Принято сообщение с сервера: {'action': 'message', 'from': 'test1', 'to': 'test2', 'time': 1651608961.7121093, 'mess_text': 'fDDClDfM5SDGmQ5eDxW2JdpodXYqBjBH4COKgVspyA2tsgr5DLROgdMgBO7juWplZglc56h8u3124U2Ogf/L8kBZLEIaan2uxPmQ3dyrP29BXf+OEgU+MaAOWop3yEBtxvb366pN/7/dJgPf8GiRsLUtY4hepfAOBcvOM99IKhWfpHE1pb0+iBH0ZuhJURMEm8c+VbqEx9+7iJyUcVuJ7+sJIoyTgK6bj9hfPeE3DtIYMUE6fohOMP2rPBGfAnJ1J4hEJm3bcdpiAyZr3SMSzmran2qV6tXlRQmN80VDj6hpi8lO+51vRHyEHc4z6XXm6QCU2o/jrCltCSjVz89EEg=='}
+2022-05-03 23:16:02,306 DEBUG transport.py Разбор сообщения от сервера: {'action': 'message', 'from': 'test1', 'to': 'test2', 'time': 1651608961.7121093, 'mess_text': 'fDDClDfM5SDGmQ5eDxW2JdpodXYqBjBH4COKgVspyA2tsgr5DLROgdMgBO7juWplZglc56h8u3124U2Ogf/L8kBZLEIaan2uxPmQ3dyrP29BXf+OEgU+MaAOWop3yEBtxvb366pN/7/dJgPf8GiRsLUtY4hepfAOBcvOM99IKhWfpHE1pb0+iBH0ZuhJURMEm8c+VbqEx9+7iJyUcVuJ7+sJIoyTgK6bj9hfPeE3DtIYMUE6fohOMP2rPBGfAnJ1J4hEJm3bcdpiAyZr3SMSzmran2qV6tXlRQmN80VDj6hpi8lO+51vRHyEHc4z6XXm6QCU2o/jrCltCSjVz89EEg=='}
+2022-05-03 23:16:02,306 DEBUG transport.py Получено сообщение от пользователя test1:fDDClDfM5SDGmQ5eDxW2JdpodXYqBjBH4COKgVspyA2tsgr5DLROgdMgBO7juWplZglc56h8u3124U2Ogf/L8kBZLEIaan2uxPmQ3dyrP29BXf+OEgU+MaAOWop3yEBtxvb366pN/7/dJgPf8GiRsLUtY4hepfAOBcvOM99IKhWfpHE1pb0+iBH0ZuhJURMEm8c+VbqEx9+7iJyUcVuJ7+sJIoyTgK6bj9hfPeE3DtIYMUE6fohOMP2rPBGfAnJ1J4hEJm3bcdpiAyZr3SMSzmran2qV6tXlRQmN80VDj6hpi8lO+51vRHyEHc4z6XXm6QCU2o/jrCltCSjVz89EEg==
+2022-05-03 23:16:07,062 DEBUG transport.py Сформирован словарь сообщения: {'action': 'message', 'from': 'test2', 'to': 'test1', 'time': 1651608967.0622551, 'mess_text': 'O6noenC93NL9JJi3BN2FCo8aF+sP6m7BK9H8EupjesjS0tIpLQJcro10KCPgUzV16HY2rXxF/wpSRjowlogguD68yEdTLYvQAEIdQiY74TpF0wI8LOySkQglwfoFHx9E37xLQJ1dHnZ+pJnlOSFBrLgk0DqhiZEdYOlRpH4QSbVNRW6HfPwKWFjNrI4QE0UiQSOaXcX4SLRXiJwOtrmGeWCvWLKg1/4M0YxMgKPF7KteLyrfI2vp0Kq4HR1fqdZzCPooOY5yHyy05pniass8wlkMsn07bYcx3XI8BRqxqgZXQ8XqE3FGSYypTApqzjLEkA+BF2RsZo6a0glO3lCIoA=='}
+2022-05-03 23:16:07,344 DEBUG transport.py Принято сообщение с сервера: {'action': 'message', 'from': 'test2', 'to': 'test1', 'time': 1651608967.0622551, 'mess_text': 'O6noenC93NL9JJi3BN2FCo8aF+sP6m7BK9H8EupjesjS0tIpLQJcro10KCPgUzV16HY2rXxF/wpSRjowlogguD68yEdTLYvQAEIdQiY74TpF0wI8LOySkQglwfoFHx9E37xLQJ1dHnZ+pJnlOSFBrLgk0DqhiZEdYOlRpH4QSbVNRW6HfPwKWFjNrI4QE0UiQSOaXcX4SLRXiJwOtrmGeWCvWLKg1/4M0YxMgKPF7KteLyrfI2vp0Kq4HR1fqdZzCPooOY5yHyy05pniass8wlkMsn07bYcx3XI8BRqxqgZXQ8XqE3FGSYypTApqzjLEkA+BF2RsZo6a0glO3lCIoA=='}
+2022-05-03 23:16:07,344 DEBUG transport.py Разбор сообщения от сервера: {'action': 'message', 'from': 'test2', 'to': 'test1', 'time': 1651608967.0622551, 'mess_text': 'O6noenC93NL9JJi3BN2FCo8aF+sP6m7BK9H8EupjesjS0tIpLQJcro10KCPgUzV16HY2rXxF/wpSRjowlogguD68yEdTLYvQAEIdQiY74TpF0wI8LOySkQglwfoFHx9E37xLQJ1dHnZ+pJnlOSFBrLgk0DqhiZEdYOlRpH4QSbVNRW6HfPwKWFjNrI4QE0UiQSOaXcX4SLRXiJwOtrmGeWCvWLKg1/4M0YxMgKPF7KteLyrfI2vp0Kq4HR1fqdZzCPooOY5yHyy05pniass8wlkMsn07bYcx3XI8BRqxqgZXQ8XqE3FGSYypTApqzjLEkA+BF2RsZo6a0glO3lCIoA=='}
+2022-05-03 23:16:07,344 DEBUG transport.py Получено сообщение от пользователя test2:O6noenC93NL9JJi3BN2FCo8aF+sP6m7BK9H8EupjesjS0tIpLQJcro10KCPgUzV16HY2rXxF/wpSRjowlogguD68yEdTLYvQAEIdQiY74TpF0wI8LOySkQglwfoFHx9E37xLQJ1dHnZ+pJnlOSFBrLgk0DqhiZEdYOlRpH4QSbVNRW6HfPwKWFjNrI4QE0UiQSOaXcX4SLRXiJwOtrmGeWCvWLKg1/4M0YxMgKPF7KteLyrfI2vp0Kq4HR1fqdZzCPooOY5yHyy05pniass8wlkMsn07bYcx3XI8BRqxqgZXQ8XqE3FGSYypTApqzjLEkA+BF2RsZo6a0glO3lCIoA==
+2022-05-03 23:16:07,344 DEBUG transport.py Разбор сообщения от сервера: {'response': 200}
+2022-05-03 23:16:07,344 INFO transport.py Отправлено сообщение для пользователя test1
+2022-05-03 23:16:07,355 DEBUG main_window.py Отправлено сообщение для test1: test1
+2022-05-03 23:16:31,091 DEBUG transport.py Транспорт завершает работу.
+2022-05-03 23:16:31,845 DEBUG transport.py Потеряно соединение с сервером.
+2022-05-03 23:16:41,918 DEBUG transport.py Сформирован словарь сообщения: {'action': 'message', 'from': 'test1', 'to': 'test2', 'time': 1651609001.9188807, 'mess_text': 'Y2VWFf6VCkYdLhNbmzgkCgza8DfI3pWGaqOvNmHYxraPSAUN5jCayk9LT7rybIV5P5o5KuAxf7ONXFLTTVoHkFTPKqXin7GAzvc6KRw+WzFWJJ8Dbh6+g3Wroq7QhD63EmlY9ZpdPt9pIQ2GY5FdqGZDGixQL+t840cILS5AokAmJIrmdDfteeC898YkXniB6EXQbDljdNGCp5LwmbbXVLQ4i1guaByJnlippUhCQSjixPe13FfS4vKftKqXRduzaBstLGpI/vuUuaOzyfbimsKKK8B4zONwGLC0w9ewkFRuLRGHkBRLztWmiwKg34a37+Q8Teze3NrxuJwzeXTzpg=='}
+2022-05-03 23:16:42,403 DEBUG transport.py Разбор сообщения от сервера: {'response': 400, 'error': 'Пользователь не зарегистрирован на сервере.'}
+2022-05-03 23:16:58,508 DEBUG transport.py Транспорт завершает работу.
+2022-05-03 23:16:59,417 DEBUG transport.py Потеряно соединение с сервером.
